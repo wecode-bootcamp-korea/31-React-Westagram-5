@@ -2,24 +2,24 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //종환
-import LoginHwan from './pages/jangjonghwan/Login/Login';
-import MainHwan from './pages/jangjonghwan/Main/Main';
+import LoginHwan from './pages/jangjonghwan/Login/LoginHwan';
+import MainHwan from './pages/jangjonghwan/Main/MainHwan';
 
 //민수
-import LoginMinsu from './pages/minsuKim/Login/Login';
-import MainMinsu from './pages/minsuKim/Main/Main';
+import LoginMinsu from './pages/minsuKim/Login/LoginMinsu';
+import MainMinsu from './pages/minsuKim/Main/MainMinsu';
 
 //재혁
-import LoginJaehyuk from './pages/jaehyuk/Login/Login';
-import MainJaehyuk from './pages/jaehyuk/Main/Main';
+import LoginJaehyuk from './pages/jaehyuk/Login/LoginJaehyuk';
+import MainJaehyuk from './pages/jaehyuk/Main/MainJaehyuk';
 
 //경서
-import LoginKyungsuh from './pages/kyungsuh/Login/Login';
-import MainKyungsuh from './pages/kyungsuh/Main/Main';
+import LoginKyungsuh from './pages/kyungsuh/Login/LoginKyungsuh';
+import MainKyungsuh from './pages/kyungsuh/Main/MainKyungsuh';
 
 //동욱
-import LoginDongwook from './pages/dongwook/Login/Login';
-import MainDongwook from './pages/dongwook/Main/Main';
+import LoginDongwook from './pages/dongwook/Login/LoginDongwook';
+import MainDongwook from './pages/dongwook/Main/MainDongwook';
 
 function Router() {
   return (
