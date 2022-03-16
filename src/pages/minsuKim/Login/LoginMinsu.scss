@@ -1,1 +1,129 @@
-// scss
+@import '../../../styles/common.scss';
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: $border;
+    margin-top: 50px;
+    height: 80vh;
+    max-height: 750px;
+    width: 75vw;
+    max-width: 600px;
+
+    p:first-child {
+      font-family: 'Lobster', cursive;
+      font-size: 85px;
+      margin-bottom: 70px;
+    }
+
+    p:last-child {
+      color: #0a3566;
+      margin-top: 120px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-between;
+
+      button {
+        height: 55px;
+        width: 300px;
+        color: white;
+        border: none;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        background-color: #0095f6;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      // button:disabled {
+      //   background-color: #c4e0f4;
+      // }
+
+      input {
+        height: 60px;
+        width: 300px;
+        padding: 15px;
+        background-color: $backgroundColor;
+        border: $border;
+        border-radius: 5px;
+        font-size: 17px;
+      }
+      input::placeholder {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@keyframes hideIconScreen {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// #showing-icon-screen img {
+//   height: 70px;
+//   width: 70px;
+// }
+
+// #showing-icon-screen a {
+//   margin-top: 50px;
+//   font-size: 15px;
+//   color: rgba(0, 0, 0, 0.3);
+// }
+
+#showing-icon-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  font-size: 128px;
+  animation: hideIconScreen 0.3s ease-in-out forwards;
+  animation-delay: 1s;
+
+  img {
+    height: 70px;
+    width: 70px;
+  }
+
+  a {
+    margin-top: 50px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
