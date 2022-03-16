@@ -1,9 +1,7 @@
-// import react from "react";
+import React from 'react';
 
-// function Login() {
-//     return (
+function Login() {
+  return <div> test </div>;
+}
 
-//     )
-// }
-
-// export default Login
+export default Login;
