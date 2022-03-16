@@ -1,1 +1,71 @@
-// scss
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+
+$border-color: #DBDBDB;
+$font-stack: 'Lobster Two',
+cursive;
+
+.section {
+  width: 350px;
+  margin: 5rem auto;
+  background-color: #FFFFFF;
+  border: 1px solid $border-color;
+
+  .title {
+    font-family: $font-stack;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .formLogin {
+    display: flex;
+    flex-direction: column;
+    max-width: 78%;
+    margin: 0 auto;
+
+    input {
+      height: 36px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      padding: 0 10px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      margin-top: 3rem;
+    }
+
+    .inputAlert {
+      font-size: 8px;
+    }
+
+    .inputPassAlert {
+      font-size: 8px;
+    }
+
+    .goToLink {
+      text-align: center;
+      margin: 5rem 0 2rem;
+      color: black;
+      text-decoration: none;
+      font-size: 12px;
+    }
+  }
+}
+
+.off {
+  background: #B2DFFC;
+  cursor: not-allowed;
+}
+
+.on {
+  background: #0095f6;
+  cursor: pointer;
+}
