@@ -25,20 +25,20 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login-hwan" element={<LoginHwan />} />
-        <Route path="/Main-hwan" element={<MainHwan />} />
+        <Route path="/hwan/login" element={<LoginHwan />} />
+        <Route path="/hwan/main" element={<MainHwan />} />
 
-        <Route path="/login-hwan" element={<LoginMinsu />} />
-        <Route path="/Main-hwan" element={<MainMinsu />} />
+        <Route path="/minsu/login" element={<LoginMinsu />} />
+        <Route path="/minsu/main" element={<MainMinsu />} />
 
-        <Route path="/login-hwan" element={<LoginJaehyuk />} />
-        <Route path="/Main-hwan" element={<MainJaehyuk />} />
+        <Route path="/jaehyuk/login" element={<LoginJaehyuk />} />
+        <Route path="/jaehyuk/main" element={<MainJaehyuk />} />
 
-        <Route path="/login-hwan" element={<LoginKyungsuh />} />
-        <Route path="/Main-hwan" element={<MainKyungsuh />} />
+        <Route path="/suh/login" element={<LoginKyungsuh />} />
+        <Route path="/suh/main" element={<MainKyungsuh />} />
 
-        <Route path="/login-hwan" element={<LoginDongwook />} />
-        <Route path="/Main-hwan" element={<MainDongwook />} />
+        <Route path="/dong/login" element={<LoginDongwook />} />
+        <Route path="/dong/main" element={<MainDongwook />} />
       </Routes>
     </BrowserRouter>
   );
