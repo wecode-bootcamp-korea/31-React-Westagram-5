@@ -9,7 +9,7 @@ function Login() {
         <div className="main-box-1">
           <div className="logo-box-1">
             <p className="main-font">
-              <Link to="/Main">Westagram</Link>
+              <Link to="/Jaehyuk/main">Westagram</Link>
             </p>
           </div>
         </div>
