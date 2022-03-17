@@ -4,76 +4,9 @@
 
 .Main {
   min-width: 1000px;
-  background-color: #f2f2f2;
-  .navBar {
-    padding: 30px 0;
-    border-bottom: $border;
-    background-color: white;
-
-    .navInner {
-      display: flex;
-      justify-content: space-between;
-      width: 75%;
-      max-width: 1000px;
-      margin: 0 auto;
-      font-size: 30px;
-    }
-    .titleWrapper {
-      span {
-        padding: 0 10px;
-      }
-      h1 {
-        font-size: 40px;
-        color: black;
-        display: inline-block;
-        font-family: 'Lobster', cursive;
-      }
-
-      h1:hover {
-        opacity: 0.5;
-      }
-    }
-    .searchWrapper {
-      position: relative;
-      width: 200px;
-
-      .fa-magnifying-glass {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 20px;
-        color: #d3d3d3;
-      }
-
-      input {
-        padding: 7px 10px;
-        width: 100%;
-        text-align: center;
-        border: $border;
-        border-radius: 3px;
-        background-color: #fafafa;
-        font-size: 15px;
-        color: #d3d3d3;
-      }
-
-      input:focus {
-        position: relative;
-        background-color: white;
-        z-index: 1;
-      }
-    }
-
-    .status {
-      div {
-        display: inline-block;
-        font-size: 25px;
-        margin-right: 20px;
-        color: black;
-      }
-    }
-  }
 
   .mainContainer {
+    // background-color: #f2f2f2;
     display: grid;
     grid-template-columns: 70% 25%;
     grid-column-gap: 5%;
@@ -86,13 +19,14 @@
       background-color: white;
 
       section {
+        border-radius: 5px;
         border: $border;
 
         .feedHeader {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 10px 20px;
+          padding: 15px 25px;
 
           div {
             display: flex;
@@ -126,7 +60,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 600px;
+          height: 550px;
 
           img {
             width: 100%;
@@ -141,8 +75,22 @@
             justify-content: space-between;
             font-size: 25px;
 
+            div {
+              display: flex;
+              width: 15%;
+              justify-content: space-between;
+            }
+
             .fa-heart {
-              color: red;
+              color: tomato;
+            }
+
+            .fa-comment {
+              color: blue;
+            }
+
+            .fa-envelope-open {
+              color: green;
             }
           }
           .commentLike {
@@ -206,6 +154,25 @@
 
       .sectionWrapper {
         display: flex;
+
+        .circledImage {
+          position: relative;
+
+          img {
+            margin-right: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+          }
+
+          .liveCircle {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            left: -2px;
+            top: 0px;
+          }
+        }
 
         i {
           margin-right: 10px;

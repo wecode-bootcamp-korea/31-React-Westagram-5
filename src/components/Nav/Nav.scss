@@ -1,0 +1,70 @@
+@import '../../styles/common.scss';
+
+.navBar {
+  padding: 30px 0;
+  border-bottom: $border;
+  background-color: white;
+
+  .navInner {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  .titleWrapper {
+    span {
+      padding: 0 10px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: $font-weight-bold;
+      color: black;
+      display: inline-block;
+      font-family: 'Lobster', cursive;
+    }
+
+    h1:hover {
+      opacity: 0.5;
+    }
+  }
+  .searchWrapper {
+    position: relative;
+    width: 200px;
+
+    .fa-magnifying-glass {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+      color: #d3d3d3;
+    }
+
+    input {
+      padding: 7px 10px;
+      width: 100%;
+      text-align: center;
+      border: $border;
+      border-radius: 3px;
+      background-color: #fafafa;
+      font-size: 15px;
+      color: #d3d3d3;
+    }
+
+    input:focus {
+      position: relative;
+      background-color: white;
+      z-index: 1;
+    }
+  }
+
+  .status {
+    div {
+      display: inline-block;
+      font-size: 25px;
+      margin-right: 20px;
+      color: black;
+    }
+  }
+}

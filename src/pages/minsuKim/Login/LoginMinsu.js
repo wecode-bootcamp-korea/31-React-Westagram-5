@@ -7,7 +7,7 @@ function LoginMinsu() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('/main');
+    navigate('/minsu/main');
   };
 
   return (
