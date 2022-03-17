@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from './Router';
+// fontawesome 추가
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import './styles/reset.scss';
 import './styles/common.scss';
