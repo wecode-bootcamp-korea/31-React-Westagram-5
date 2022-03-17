@@ -1,1 +1,346 @@
-// scss
+html,
+body {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.root-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 30px 100px 30px 100px;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  height: 5%;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.main {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  flex: 1;
+}
+
+.blank {
+  width: 10%;
+}
+
+.feeds {
+  display: flex;
+  flex: 1;
+  margin: 5px;
+}
+
+.main-right {
+  display: flex;
+  flex: 0.5;
+  margin: 5px;
+  flex-direction: column;
+
+  margin-left: 100px;
+}
+
+.right-profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.child-id {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.right-profile-pic {
+  margin-right: 5px;
+}
+.right-profile {
+  display: flex;
+  margin: 20px;
+}
+.right-profile-id {
+  display: flex;
+  align-items: flex-start;
+}
+.story-box-header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.story-profile-box {
+  margin-bottom: 15px;
+}
+.story-add-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-more-button {
+  border: 0;
+  background-color: white;
+  font-family: 'Jua', sans-serif;
+}
+.story-title {
+  color: grey;
+  margin-left: 10px;
+  font-family: 'Jua', sans-serif;
+}
+.story-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.story-profile {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: 0px 10px 5px 10px;
+}
+.story-profile-pic {
+  margin: 5px 10px 0px 0px;
+}
+
+span {
+  display: block;
+}
+.recommand-user {
+  font-weight: bolder;
+  color: grey;
+  font-family: 'Jua', sans-serif;
+}
+
+.recommand-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.recommand-box-header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.recommand-add-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommand-profile {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: 0px 10px 5px 10px;
+}
+.recommand-title {
+  color: grey;
+  margin-left: 10px;
+  font-family: 'Jua', sans-serif;
+}
+.recommand-profile-pic {
+  margin-right: 10px;
+}
+.title-comment {
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+}
+.title-comment-1 {
+  font-weight: bolder;
+  margin: 0px 5px 0px 10px;
+}
+.title-comment-3 {
+  font-weight: bolder;
+  margin: 0px 5px 0px 10px;
+}
+.user-nickname {
+  font-weight: bolder;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+}
+
+.comment {
+  display: flex;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-pic-1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.feeds-profile {
+  display: flex;
+  flex: 1;
+  margin: 30px;
+  flex-direction: column;
+}
+.feeds-pic {
+  display: flex;
+  flex: 1;
+}
+#picture {
+  width: 600px;
+  height: 600px;
+}
+.main-profile-box {
+  display: flex;
+  flex: 0.5;
+  align-items: center;
+}
+.comment-icon {
+  width: 100%;
+}
+
+.comment-left-icon {
+  margin: 5px 10px 0px 5px;
+}
+.icon {
+  margin-right: 10px;
+}
+
+.comment-profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.likes-profile {
+  display: flex;
+  align-items: center;
+}
+
+.main-feeds {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.comment-icon {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.feeds-footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.comment-left-icon {
+  display: flex;
+}
+
+.comment-icon {
+  width: 80%;
+}
+.submit-form {
+  display: flex;
+  flex: 1;
+}
+.comment-box {
+  display: flex;
+  flex: 1;
+  width: 400px;
+}
+
+.comment-child {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-child p:nth-child(1) {
+  margin-right: 10px;
+  font-weight: bolder;
+}
+
+#input-comment {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.input-comment-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#input-comment-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.font {
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+
+#input-text {
+  display: flex;
+  flex: 0.5;
+  border: 0px;
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.insta-logo-box {
+  display: flex;
+  align-items: center;
+}
+#instagram-icon {
+  height: 30px;
+  margin: 5px 0px 0px 0px;
+}
+
+#line {
+  height: 15px;
+  border: 1px solid gray;
+  margin: 0 10px;
+}
+
+.search-box {
+  display: flex;
+  flex: 0.5;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-name {
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
+}
+#header-search-input {
+  margin-top: 10px;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+}
+
+.header-icon-box {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  height: 25px;
+  margin-right: 15px;
+}
+
+.user-nickname {
+  display: flex;
+  font-size: 20px;
+}

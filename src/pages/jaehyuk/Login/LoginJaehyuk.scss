@@ -1,1 +1,85 @@
-// scss
+html,
+body {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-1 {
+  display: flex;
+  align-items: stretch;
+  height: 500px;
+  width: 500px;
+  border: solid rgb(172, 172, 172);
+}
+.container-1 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.main-box-1 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-box-1 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.input-form-1 {
+  display: flex;
+  flex: 1;
+  height: 200%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-id-1 {
+  display: flex;
+  flex: 1;
+}
+.password-input-1 {
+  display: flex;
+  flex: 1;
+}
+.find-password-1 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-font {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-family: "Lobster Two", cursive;
+  font-size: 60px;
+}
+
+#id-input-1 {
+  height: 50px;
+  width: 80%;
+}
+#password-input-1 {
+  height: 50px;
+  width: 80%;
+  margin: 5px 0px 0px 0px;
+}
+#login {
+  height: 50px;
+  width: 80%;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #0095f6;
+  opacity: 0.5;
+}
+
+.find-password {
+  color: rgb(51, 51, 129);
+}
