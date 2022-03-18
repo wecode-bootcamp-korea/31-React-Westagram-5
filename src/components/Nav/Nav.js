@@ -1,10 +1,14 @@
+import React from 'react';
+
+import '../Nav/Nav.scss';
+
 function Nav() {
   return (
     <nav className="nav">
       <div className="navBox">
         <div className="title">
           <img src="/images/kyungsuh/insta.svg" className="imgLogo" />
-          <span className="logo">Westagram</span>
+          <h1 className="logo">Westagram</h1>
         </div>
 
         <div className="searchBox">
@@ -27,12 +31,8 @@ function Nav() {
 
         <div className="iconBox">
           <img src="/images/kyungsuh/explore.png" alt="탐색하기" />
-          <img src="/images/kyungsuh/heart.png" alt="좋아요 버튼" />
-          <img
-            src="/images/kyungsuh/profile.png"
-            alt="프로필 버튼"
-            id="btnModal"
-          />
+          <img src="/images/kyungsuh/heart.png" alt="좋아요" />
+          <img src="/images/kyungsuh/profile.png" alt="프로필" id="btnModal" />
         </div>
       </div>
     </nav>
