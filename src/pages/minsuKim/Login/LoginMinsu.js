@@ -39,7 +39,7 @@ function LoginMinsu() {
           <p>Forgot password?</p>
         </div>
         <div id="showing-icon-screen">
-          <img alt="Instagram Logo" src="images/instagram.png" />
+          <img alt="Instagram Logo" src="/images/minsuKim/instagram.png" />
           <a
             href="https://www.flaticon.com/free-icons/instagram"
             title="instagram icons"
