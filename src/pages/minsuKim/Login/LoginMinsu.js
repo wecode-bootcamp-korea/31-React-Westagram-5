@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import './LoginMinsu.scss';
+// import { Link } from 'react-router-dom';
 
 function LoginMinsu() {
   const navigate = useNavigate();

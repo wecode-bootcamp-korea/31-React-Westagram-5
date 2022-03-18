@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import NavMinsu from '../../../components/Nav/Nav';
 import './MainMinsu.scss';
+// import { useNavigate } from 'react-router-dom';
+// import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 
 function MainMinsu() {
   return (
