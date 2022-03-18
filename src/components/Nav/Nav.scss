@@ -1,0 +1,53 @@
+$border-color: 1px solid #DBDBDB;
+
+.nav {
+  border-bottom: $border-color;
+  width: 100%;
+  display: flex;
+  height: 60px;
+  background-color: #FFFFFF;
+
+  .navBox {
+    width: 65%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    .title {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-family: 'Lobster Two', cursive;
+        font-size: 2rem;
+        padding-left: 1rem;
+      }
+    }
+
+    .imgLogo {
+      width: 26px;
+    }
+  }
+
+  .inpSearch {
+    width: 250px;
+    height: 36px;
+    border-radius: 8px;
+    padding: 0 15px;
+    background: #EFEFEF;
+    border: none;
+  }
+
+  .iconBox {
+    display: flex;
+    gap: 1rem;
+
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
+  }
+}
