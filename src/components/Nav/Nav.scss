@@ -44,5 +44,10 @@ $border-color: 1px solid #DBDBDB;
   .iconBox {
     display: flex;
     gap: 1rem;
+
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
   }
 }

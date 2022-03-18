@@ -1,38 +1,27 @@
 import React from 'react';
-
-import '../Nav/Nav.scss';
+import './Nav.scss';
 
 function Nav() {
   return (
     <nav className="nav">
       <div className="navBox">
         <div className="title">
-          <img src="/images/kyungsuh/insta.svg" className="imgLogo" />
+          <img
+            src="/images/common/insta.svg"
+            className="imgLogo"
+            alt="위스타 로고 이미지"
+          />
           <h1 className="logo">Westagram</h1>
         </div>
 
         <div className="searchBox">
           <input type="text" placeholder="검색" className="inpSearch" />
-          <div>
-            <div className="resultBox">
-              <div className="speechBubble"></div>
-              <div className="innerBox">
-                <header>
-                  <div>
-                    <h4>최근 검색 항목</h4>
-                    <button>모두 지우기</button>
-                  </div>
-                </header>
-                <ul className="searchList"></ul>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="iconBox">
-          <img src="/images/kyungsuh/explore.png" alt="탐색하기" />
-          <img src="/images/kyungsuh/heart.png" alt="좋아요" />
-          <img src="/images/kyungsuh/profile.png" alt="프로필" id="btnModal" />
+          <img src="/images/common/explore.png" alt="탐색하기" />
+          <img src="/images/common/heart.png" alt="좋아요" />
+          <img src="/images/common/profile.png" alt="프로필" id="btnModal" />
         </div>
       </div>
     </nav>
