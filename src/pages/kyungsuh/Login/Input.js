@@ -5,9 +5,11 @@ function Input(props) {
     <>
       <input
         type={props.type}
+        value={props.value}
         className={props.className}
         placeholder={props.placeholder}
-        onChange={props.함수}
+        onChange={props.handleInput}
+        // onChange={props.유효성검사}
       />
     </>
   );
