@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LoginFormMinsu from '../LoginForm/LoginFormMinsu';
 import './LoginMinsu.scss';
 // import { Link } from 'react-router-dom';
 
@@ -12,30 +13,10 @@ function LoginMinsu() {
 
   return (
     <>
-      <body className="login">
+      <div className="login">
         <div className="loginBox">
           <p>weeestagram</p>
-          <form>
-            <div>
-              <input
-                type="text"
-                required
-                minlength="1"
-                placeholder="Phone number, User name or Email"
-              />
-            </div>
-            <div>
-              <input
-                required
-                minlength="1"
-                type="password"
-                placeholder="Password"
-              />
-            </div>
-            <button type="submit" onClick={goToMain}>
-              로그인
-            </button>
-          </form>
+          <LoginFormMinsu />
           <p>Forgot password?</p>
         </div>
         <div id="showing-icon-screen">
@@ -48,7 +29,7 @@ function LoginMinsu() {
           </a>
         </div>
         <script src="js/login.js"></script>
-      </body>
+      </div>
     </>
   );
 }

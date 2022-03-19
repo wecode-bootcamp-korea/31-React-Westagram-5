@@ -31,46 +31,6 @@ $border: 1px solid rgba(0, 0, 0, 0.2);
       color: #0a3566;
       margin-top: 100px;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      button {
-        height: 55px;
-        width: 300px;
-        color: white;
-        border: none;
-        font-size: 20px;
-        border-radius: 5px;
-        margin-top: 10px;
-        background-color: #0095f6;
-      }
-
-      button:hover {
-        opacity: 0.8;
-        cursor: pointer;
-      }
-      // button:disabled {
-      //   background-color: #c4e0f4;
-      // }
-
-      input {
-        height: 60px;
-        width: 300px;
-        padding: 15px;
-        background-color: $backgroundColor;
-        border: $border;
-        border-radius: 5px;
-        font-size: 17px;
-        margin-top: 5px;
-      }
-      input::placeholder {
-        font-size: 15px;
-        opacity: 0.3;
-      }
-    }
   }
 }
 
