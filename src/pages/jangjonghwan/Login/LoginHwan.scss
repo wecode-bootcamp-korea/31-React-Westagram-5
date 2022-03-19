@@ -72,16 +72,18 @@
     width: 330px;
     border: 0;
     outline: 0;
-    background-color: #0295f6;
     font-size: 15px;
     font-weight: bold;
     border-radius: 5px;
     color: #ffffff;
-
-    button:disabled {
-      background-color: #c4e0fb;
-    }
   }
+}
+
+.activationBtn {
+  background-color: #0295f6;
+}
+.disabledBtn {
+  background-color: #c4e0fb;
 }
 
 a {

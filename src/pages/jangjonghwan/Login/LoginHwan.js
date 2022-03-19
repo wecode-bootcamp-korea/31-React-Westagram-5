@@ -12,10 +12,16 @@ function Login() {
   const handleIdInput = e => {
     setUserId(e.target.value);
   };
-
   const [userPassword, setUserPassword] = useState('');
   const handlePwInput = e => {
     setUserPassword(e.target.value);
+  };
+
+  const [activation, setActivation] = useState(false);
+  const isPassedLogin = () => {
+    return userId.includes('@') && userPassword.length > 4
+      ? setActivation(true)
+      : setActivation(false);
   };
 
   return (
@@ -26,6 +32,7 @@ function Login() {
 
         <section className="loginButton">
           <input
+            onKeyUp={isPassedLogin}
             onChange={handleIdInput}
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -33,6 +40,7 @@ function Login() {
             value={userId}
           />
           <input
+            onKeyUp={isPassedLogin}
             onChange={handlePwInput}
             type="password"
             placeholder="비밀번호"
@@ -41,7 +49,11 @@ function Login() {
           />
 
           <div className="pwButton">
-            <button className="connect" type="button" onClick={goToMain}>
+            <button
+              className={activation ? 'activationBtn' : 'disabledBtn'}
+              type="button"
+              onClick={goToMain}
+            >
               로그인
             </button>
           </div>
