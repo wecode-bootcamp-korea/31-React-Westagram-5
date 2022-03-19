@@ -15,8 +15,6 @@ function LoginFormMinsu() {
 
   const handleIdInput = event => {
     setIdValue({ id: event.target.value });
-
-    checkValidation();
   };
 
   const handlePasswordInput = event => {
@@ -61,6 +59,7 @@ function LoginFormMinsu() {
           type="submit"
           style={{ backgroundColor: btnColor }}
           disabled={btndisabled}
+          onClick={goToMain}
         >
           로그인
         </button>
