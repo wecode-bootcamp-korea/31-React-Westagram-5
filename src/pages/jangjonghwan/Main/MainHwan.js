@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MainHwan.scss';
+import Child from './Child';
 
 class Main extends Component {
   constructor() {
@@ -118,14 +119,8 @@ class Main extends Component {
                       aineworld님 외 10명이 좋아합니다.
                     </span>
                     <li className="commentList" />
-                    {this.state.commentList.map((comm, idx) => {
-                      return (
-                        <li className="addComments" key={idx}>
-                          {comm}
-                        </li>
-                      );
-                    })}
                   </ul>
+                  <Child commentList={this.state.commentList} />
                   <input
                     onChange={this.getValue}
                     onKeyPress={this.addCommEnter}
