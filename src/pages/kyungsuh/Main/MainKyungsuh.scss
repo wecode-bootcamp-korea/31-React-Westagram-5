@@ -95,6 +95,7 @@ $border-color: 1px solid #DBDBDB;
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    margin-bottom: 4rem;
 
     .feed {
       max-width: 614px;
@@ -138,6 +139,10 @@ $border-color: 1px solid #DBDBDB;
       position: relative;
       padding: 7px;
       cursor: pointer;
+
+      button {
+        background-color: #fff;
+      }
 
       .icon img:nth-child(1) {
         width: 22px;
@@ -193,7 +198,7 @@ $border-color: 1px solid #DBDBDB;
 
       .comment {
         margin: 10px 0 8px 15px;
-        font-size: 12px;
+        font-size: 15px;
       }
 
       img {
@@ -201,11 +206,10 @@ $border-color: 1px solid #DBDBDB;
         height: 16px;
       }
 
-      .moreIconBox img {
+      .moreIconBox .iconMore {
         position: absolute;
         top: 1.2rem;
         right: 1rem;
-        width: 30px;
         cursor: pointer;
       }
 
@@ -231,6 +235,7 @@ $border-color: 1px solid #DBDBDB;
         button {
           border: none;
           background: #fff;
+          cursor: pointer;
 
 
         }

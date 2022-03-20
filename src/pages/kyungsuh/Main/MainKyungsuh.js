@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import MainPage from './Mainpage/Mainpage';
 import Nav from '../../../components/Nav/Nav';
 import styles from './MainKyungsuh.scss';
-import common from '../../../styles/common.scss';
 
 function Main() {
   return (
