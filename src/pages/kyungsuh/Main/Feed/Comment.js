@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Comment({ value, index }) {
+function Comment({ value }) {
   return (
-    <div className="innerBox" key={index}>
+    <div className="innerBox">
       <div className="comment">{value}</div>
       <div className="iconBox">
         <button className="deleteBtn">

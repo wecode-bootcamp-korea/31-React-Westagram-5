@@ -82,7 +82,7 @@ function Feed() {
               className="iconMore"
             />
             {input.map((value, index) => {
-              return <Comment value={value} index={index} />;
+              return <Comment value={value} key={index} />;
             })}
           </div>
         </div>
