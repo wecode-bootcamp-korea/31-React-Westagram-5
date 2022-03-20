@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import './MainHwan.scss';
 import Child from './Child';
@@ -31,8 +32,6 @@ class Main extends Component {
   };
 
   render() {
-    console.log(this.state.value);
-
     return (
       <>
         <div className="nav">
@@ -120,7 +119,7 @@ class Main extends Component {
                     </span>
                     <li className="commentList" />
                   </ul>
-                  <Child commentList={this.state.commentList} />
+                  <Child comment={this.state.commentList} />
                   <input
                     onChange={this.getValue}
                     onKeyPress={this.addCommEnter}
