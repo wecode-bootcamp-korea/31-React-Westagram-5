@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LoginJaehyuk.scss';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const isPassedLogin = () => {};
+  const isPassLogin = () => {};
+
+  const onHandleIdInput = e => {
+    // setEmail {e.target.value}
+    setEmail(e.target.value);
+  };
+  const handlePasswordInput = e => {
+    setPassword(e.target.value);
+  };
+  // email += inputStr; x
   return (
     <div className="wrap-1">
       <div className="container-1">
@@ -18,8 +32,16 @@ function Login() {
             id="id-input-1"
             type="text"
             placeholder="전화번호,사용자 이름 또는 이메일"
+            value={email}
+            onChange={onHandleIdInput}
           />
-          <input id="password-input-1" type="text" placeholder="비밀번호" />
+          <input
+            id="password-input-1"
+            type="password"
+            placeholder="비밀번호"
+            value={password}
+            onChange={handlePasswordInput}
+          />
           <button id="login">
             <span className="login-alphabet">로그인</span>
           </button>
