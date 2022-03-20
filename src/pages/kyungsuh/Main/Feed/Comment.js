@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Comment({ value }) {
+const Comment = ({ value }) => {
   return (
     <div className="innerBox">
       <div className="comment">{value}</div>
@@ -16,6 +16,6 @@ function Comment({ value }) {
       </div>
     </div>
   );
-}
+};
 
 export default Comment;
