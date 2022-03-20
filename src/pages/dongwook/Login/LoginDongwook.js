@@ -2,10 +2,15 @@ import React from 'react';
 import './LoginDongwook.scss';
 import { Link } from 'react-router-dom';
 
+function handleIdInput(){
+
+}
+
 function LoginDongwook() {
   return (
     <div className="finalBox">
       <div className="fontBox">westagram</div>
+
 
       <div className="loginBox">
         <input
@@ -13,7 +18,7 @@ function LoginDongwook() {
           className="idBox"
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
-        <input type="password" className="passBox" placeholder="비밀번호" />
+        <input type="password" className="passBox" placeholder="비밀번호" onChange={handleIdInput}/>
         <Link to="/Main">
           <button className="button">로그인</button>
         </Link>
@@ -24,3 +29,4 @@ function LoginDongwook() {
   );
 }
 export default LoginDongwook;
+//export
