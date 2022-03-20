@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Comment from './Comment';
 
 function Feed() {
   let [input, setInput] = useState([]);
@@ -7,7 +8,7 @@ function Feed() {
   let [color, setColor] = useState('#B2DFFC');
 
   const hasInputValue = () => {
-    inputValue.length == -1 ? setIsCommentBtn(true) : colorChange();
+    inputValue.length === -1 ? setIsCommentBtn(true) : colorChange();
   };
 
   const colorChange = () => {
@@ -73,7 +74,6 @@ function Feed() {
           <span>10분전</span>
         </div>
 
-        {/* <!-- 댓글 창 --> */}
         <div className="commentBox">
           <div className="moreIconBox">
             <img
@@ -81,27 +81,12 @@ function Feed() {
               alt="더보기"
               className="iconMore"
             />
-            {input.map(function Comment(a, i) {
-              return (
-                <div className="innerBox" key={i}>
-                  <div className="comment">{a}</div>
-                  <div className="iconBox">
-                    <button className="deleteBtn">
-                      <img src="/images/kyungsuh/xmark-solid.svg" alt="삭제" />
-                      <img
-                        className="heartIcon"
-                        src="/images/kyungsuh/heart.png"
-                        alt="댓글 좋아요"
-                      />
-                    </button>
-                  </div>
-                </div>
-              );
+            {input.map((value, index) => {
+              return <Comment value={value} index={index} />;
             })}
           </div>
         </div>
 
-        {/* <!-- 댓글 기능 구현 --> */}
         <div className="commentInpBox">
           <form className="innerBox">
             <input
