@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './LoginJaehyuk.scss';
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isActive, setIsActive] = useState('deactive');
+  const [isDisable, setIsDisable] = useState(true);
+  const [color, setColor] = useState('#B2DFFC');
 
   const isPassedLogin = () => {};
   const isPassLogin = () => {};
@@ -12,10 +16,35 @@ function Login() {
   const onHandleIdInput = e => {
     // setEmail {e.target.value}
     setEmail(e.target.value);
+    checkInput();
   };
   const handlePasswordInput = e => {
     setPassword(e.target.value);
+    checkInput();
   };
+
+  const checkInput = () => {
+    setColor(email.indexOf('@') && password.length > 4 ? 'blue' : '#B2DFFC');
+  };
+  // const activateBtn = () => {
+  //   setColor('blue');
+  //   setIsActive('active');
+  //   setIsDisable(true);
+  // };
+  const deActivateBtn = () => {
+    setIsActive('deactive');
+    setIsDisable(false);
+  };
+  // const navigate = useNavigate();
+  // const goToLogin = () => {
+  //   navigate('/jaehyuk/main');
+  // };
+  const onHandleSubmit = () => {
+    if (color === 'blue') {
+      navigate('/jaehyuk/main');
+    }
+  };
+
   // email += inputStr; x
   return (
     <div className="wrap-1">
@@ -42,7 +71,13 @@ function Login() {
             value={password}
             onChange={handlePasswordInput}
           />
-          <button id="login">
+          <button
+            id="login"
+            style={{ backgroundColor: `${color}` }}
+            type="button"
+            className="btnLogin"
+            onClick={onHandleSubmit}
+          >
             <span className="login-alphabet">로그인</span>
           </button>
         </div>
