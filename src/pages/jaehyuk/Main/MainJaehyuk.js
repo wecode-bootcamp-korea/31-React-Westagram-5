@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import InputComment from '../Components/Comments/input.comment';
 import './MainJaehyuk.scss';
+
+/**
+ * 1. wrtie comments
+ * 2. validation comments
+ * 3. pass -> array.push(comments)
+ * 4. array.map() -> comments
+ */
 
 function Main() {
   return (
@@ -106,12 +115,7 @@ function Main() {
                       <div id="input-comment">
                         <div id="input-comment-view"></div>
                         <div className="input-comment-text">
-                          <input
-                            id="input-text"
-                            name="댓글달기"
-                            placeholder="댓글달기.."
-                          />
-                          <button id="btn-submit">게시</button>
+                          {<InputComment inputName="댓글달기" />}
                         </div>
                       </div>
                     </div>

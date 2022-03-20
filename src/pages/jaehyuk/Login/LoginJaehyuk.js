@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './LoginJaehyuk.scss';
 
 function Login() {
@@ -51,9 +51,7 @@ function Login() {
       <div className="container-1">
         <div className="main-box-1">
           <div className="logo-box-1">
-            <p className="main-font">
-              <Link to="/Jaehyuk/main">Westagram</Link>
-            </p>
+            <p className="main-font">Westagram</p>
           </div>
         </div>
         <div className="input-form-1">

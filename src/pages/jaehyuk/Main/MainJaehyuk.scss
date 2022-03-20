@@ -201,9 +201,6 @@ form {
   display: flex;
   flex: 0.5;
 }
-.comment-icon {
-  width: 100%;
-}
 
 .comment-left-icon {
   margin: 5px 10px 0px 5px;
@@ -232,6 +229,7 @@ form {
 .comment-icon {
   display: flex;
   flex: 1;
+  flex-direction: row;
   justify-content: space-between;
 }
 .feeds-footer {
@@ -243,9 +241,6 @@ form {
   display: flex;
 }
 
-.comment-icon {
-  width: 80%;
-}
 .submit-form {
   display: flex;
   flex: 1;
@@ -273,7 +268,7 @@ form {
 }
 .input-comment-text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
