@@ -13,7 +13,7 @@ import {
 
 function MainDongwook() {
   const [userComment, setUserComment] = useState(' ');
-  const [userCommenArr, setUserCommentArr] = useState([]);
+  const [userCommentArr, setUserCommentArr] = useState([]);
 
   const handleComment = e => {
     console.log(e);
@@ -22,6 +22,10 @@ function MainDongwook() {
   const commentData = e => {
     setUserCommentArr(e.target.value);
   };
+  const sendComment = e => {
+    setUserCommentArr(userCommentArr => [...userCommentArr, userComment]);
+  };
+
   return (
     <div className="main">
       <header className="nav">
@@ -101,8 +105,15 @@ function MainDongwook() {
               </div>
             </div>
 
-            <div className="commentBox" onChange={commentData}>
-              <div className="friendComment">Lebron This is for you</div>
+            <div className="commentBox">
+              <div className="friendComment">
+                {userCommentArr.map((userComment, index) => (
+                  <li key={index}>
+                    <span>{userComment}</span>
+                  </li>
+                ))}{' '}
+                This is for you
+              </div>
             </div>
 
             <div className="putinBox">
@@ -112,7 +123,7 @@ function MainDongwook() {
                 className="writeBox"
                 onChange={handleComment}
               />
-              <button>게시</button>
+              <button onClick={sendComment}>게시</button>
             </div>
           </div>
         </div>
