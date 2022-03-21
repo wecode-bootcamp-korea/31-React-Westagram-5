@@ -4,45 +4,6 @@
   border: 0px;
 }
 
-.nav {
-  width: 100%;
-  height: 60px;
-  border-bottom: 1px solid #dbdbdb;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-}
-
-.instagram {
-  border-left: 1.5px solid black;
-  padding-left: 10px;
-  padding-top: 5px;
-  font-family: 'Lobster', cursive;
-  height: 30px;
-  font-size: 20px;
-  margin-right: 270px;
-  margin-top: 14px;
-  color: black;
-}
-
-.instagramIcon {
-  position: relative;
-  top: 17px;
-  margin-right: 10px;
-}
-
-.right-img {
-  margin-left: 270px;
-  margin-top: 17px;
-}
-
-img {
-  width: 23px;
-  height: 23px;
-  top: 10px;
-  padding-left: 5px;
-}
-
 .explore {
   margin-right: 10px;
 }
@@ -105,24 +66,27 @@ i {
 .fa-thumbs-up {
   position: relative;
   margin-left: 10px;
+  width: 23px;
 }
 
 .fa-comment {
   position: relative;
   margin-left: 10px;
+  width: 23px;
 }
 
 .arrow {
   position: relative;
-  bottom: 25px;
   font-size: 25px;
   left: 10px;
   color: black;
+  width: 23px;
 }
 
 .bookMark {
   position: relative;
   left: 520px;
+  width: 23px;
 }
 
 .clickLike {
@@ -169,7 +133,6 @@ li {
 input {
   width: 250px;
   height: 28px;
-  margin-top: 15px;
   background-color: #efefef;
   font-size: 15px;
   border-radius: 5px;
@@ -242,7 +205,7 @@ input::placeholder {
   border-radius: 40%;
   object-fit: cover;
   position: relative;
-  bottom: 10px;
+  top: 10px;
 }
 
 .profileId {

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './MainHwan.scss';
 import Child from './Child';
+import Nav from './Nav';
 
 class Main extends Component {
   constructor() {
@@ -34,6 +35,7 @@ class Main extends Component {
   render() {
     return (
       <div className="main-backgroundcolr">
+        <Nav />
         <main>
           <div className="main2">
             <div className="feeds">
