@@ -19,7 +19,6 @@ function LoginFormMinsu() {
 
   const handlePasswordInput = event => {
     setPasswordValue({ password: event.target.value });
-
     checkValidation();
   };
 
@@ -29,7 +28,7 @@ function LoginFormMinsu() {
     const isValidId = emainCheck.test(idValue.id);
     console.log('이메일 유효성 검사 :: ', isValidId);
 
-    const isValidPassword = passwordValue.password.length >= 8;
+    const isValidPassword = passwordValue.password.length >= 7;
     console.log(passwordValue.password.length, isValidPassword);
 
     isValidId && isValidPassword
@@ -41,7 +40,7 @@ function LoginFormMinsu() {
 
   return (
     <>
-      <form>
+      <form className="LoginForm">
         <div>
           <input
             onChange={handleIdInput}

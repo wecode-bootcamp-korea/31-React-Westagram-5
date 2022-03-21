@@ -1,0 +1,80 @@
+@import '../../../styles/common.scss';
+
+$backgroundColor: rgb(250, 250, 250);
+$border: 1px solid rgba(0, 0, 0, 0.2);
+
+.commentWrapper {
+  padding: 15px 20px;
+
+  .commentIcon {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+
+    div {
+      display: flex;
+      width: 15%;
+      justify-content: space-between;
+    }
+
+    .fa-heart {
+      color: tomato;
+    }
+
+    .fa-comment {
+      color: blue;
+    }
+
+    .fa-envelope-open {
+      color: green;
+    }
+  }
+  .commentLike {
+    display: flex;
+    margin: 15px 0;
+
+    p {
+      margin-left: 10px;
+      line-height: 18px;
+    }
+  }
+
+  .commentList {
+    font-size: 14px;
+
+    li:first-child {
+      margin-bottom: 8px;
+
+      .userName {
+        margin-right: 10px;
+        font-weight: bold;
+      }
+    }
+
+    li:last-child {
+      color: #c1c1c1;
+      font-size: 5px;
+    }
+  }
+}
+
+.comment {
+  padding: 15px 20px;
+  border-top: var(--border);
+
+  input {
+    width: 400px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+
+  #submit {
+    float: right;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+  }
+}
