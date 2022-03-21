@@ -13,40 +13,6 @@ import './MainJaehyuk.scss';
 function Main() {
   return (
     <div className="root-container">
-      <div className="nav">
-        <div className="insta-logo-box">
-          <img
-            id="instagram-icon"
-            src="/images/Jaehyuk/jh-images/icon-image/icon-insta.png"
-            alt=""
-          />
-
-          <div id="line"></div>
-          <p id="logo-name">Westagram</p>
-        </div>
-        <div className="search-box">
-          <input id="header-search-input" type="text" placeholder="검색" />
-        </div>
-        <div className="header-icon-box">
-          <img
-            alt=""
-            className="icon"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-          />
-          <img
-            alt=""
-            className="icon"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-          />
-          <img
-            alt=""
-            className="icon"
-            src={
-              'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png'
-            }
-          />
-        </div>
-      </div>
       <div className="main">
         <div className="blank"></div>
         <div className="feeds">
