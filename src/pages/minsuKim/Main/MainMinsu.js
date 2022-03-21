@@ -1,4 +1,4 @@
-import NavMinsu from '../../../components/Nav/Nav';
+import Nav from '../../../components/Nav/Nav';
 import CommentMinsu from '../comment/CommentMinsu';
 import './MainMinsu.scss';
 // import { useNavigate } from 'react-router-dom';
@@ -8,7 +8,7 @@ import './MainMinsu.scss';
 function MainMinsu() {
   return (
     <>
-      <NavMinsu />
+      <Nav />
       <body className="Main">
         <main className="mainContainer">
           <article>
