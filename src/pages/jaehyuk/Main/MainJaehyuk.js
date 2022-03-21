@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputComment from '../Components/Comments/input.comment';
 import './MainJaehyuk.scss';
-
+import Nav from '../../../components/Nav/Nav';
 /**
  * 1. wrtie comments
  * 2. validation comments
@@ -13,6 +13,7 @@ import './MainJaehyuk.scss';
 function Main() {
   return (
     <div className="root-container">
+      <Nav />
       <div className="main">
         <div className="blank"></div>
         <div className="feeds">
