@@ -40,20 +40,16 @@ $border: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .commentList {
-    font-size: 14px;
-
-    li:first-child {
-      margin-bottom: 8px;
-
-      .userName {
-        margin-right: 10px;
-        font-weight: bold;
-      }
+    li {
+      font-size: 15px;
     }
 
-    li:last-child {
-      color: #c1c1c1;
-      font-size: 5px;
+    .commentMargin {
+      margin-bottom: 5px;
+    }
+    .commentWritter {
+      font-weight: 700;
+      margin-right: 5px;
     }
   }
 }

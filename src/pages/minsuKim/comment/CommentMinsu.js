@@ -1,24 +1,33 @@
 import { useState } from 'react';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './CommentMinsu.scss';
 
 function CommentMinsu() {
-  const [commnetInput, setCommentInput] = useState('');
+  // 댓글을 저장할 state를 생성한다.
+  const [commentInput, setCommentInput] = useState('');
 
+  //댓글이 저장되는 array state를 생성한다.
+  const [commentInputArray, setCommentInputArray] = useState([]);
+
+  //input에 onChange Event가 발생할 때 마다 value를 commnetInput에 저장해준다.
   const addInput = event => {
     setCommentInput(event.target.value);
-    console.log(commnetInput);
   };
 
-  const checkInput = event => {
+  //form이 submit하면 실행되는 함수
+  const submitComment = event => {
     // preventDefault로 새로고침 방지
     event.preventDefault();
-    if (commnetInput.length === 0) {
+    if (commentInput.length === 0) {
       alert('Please Enter Commnet');
-    } else {
-      uploadInput(commnetInput);
+      return;
     }
+    setCommentInputArray(commentValueList => [
+      commentInput,
+      ...commentValueList,
+    ]);
+    //댓글창 빈칸으로
+    setCommentInput('');
   };
 
   const uploadInput = comment => {
@@ -46,20 +55,27 @@ function CommentMinsu() {
         </div>
 
         <ul className="commentList">
-          <li></li>
+          {/* comment가 나타나는 부분 */}
+          {commentInputArray.map((value, index) => (
+            <li key={index} className="commentText">
+              <div className="commentMargin">
+                <span className="commentWritter">Minsu Kim</span>
+                {value}
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
 
-      <form className="comment">
+      <form className="comment" onSubmit={submitComment}>
         <input
           id="commentInput"
           onChange={addInput}
           type="text"
+          value={commentInput}
           placeholder="댓글달기..."
         />
-        <button id="submit" onClick={checkInput} style={{ color: 'skyblue' }}>
-          게시
-        </button>
+        <button id="submit">게시</button>
       </form>
     </>
   );
