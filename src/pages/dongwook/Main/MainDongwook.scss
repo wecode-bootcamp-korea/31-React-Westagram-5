@@ -1,1 +1,216 @@
-// scss
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
+  .nav{
+    max-width: 1500px;
+    height: 50px;
+    border-bottom: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+  }
+    .headerLogo{
+      display: flex;
+      align-items: center;
+    }
+
+
+
+    .logoImg{
+      width: 30px;
+      border-right: solid 1px black;
+      padding-right: 5px;
+      width: 30px;
+      border-right: solid 1px black;
+      padding-right: 5px;
+} 
+.logoText{
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+  padding-left: 10px;
+}
+.search{
+  width: 200px;
+  position: relative;
+}
+
+
+
+.headerLogo{
+display: flex;
+align-items: center;
+}
+.logoImg{
+  width: 30px;
+  border-right: solid 1px black;
+  padding-right: 5px;
+}
+
+.logoText{
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+  padding-left: 10px;
+}
+
+.search{
+  width: 200px;
+  position: relative;
+}
+
+.profileAlarm{
+  display: flex;
+  align-items: center;
+  
+}
+.explore{
+width: 30px;
+margin-right: 5px;
+}
+.heartAlarm{
+width: 30px;
+margin-right: 5px;
+}
+.myProfile{
+width: 30px;
+}
+
+.mainCont{
+display: grid;
+grid-template-columns: 70% 25%;
+grid-column-gap: 5%;
+margin: 70px auto 0 auto;
+max-width: 1000px;
+}
+
+.contBox{
+border:  1px black solid;
+}
+
+.contHeaderImg{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.userPhoto{
+width: 40px;
+border-radius: 70%;
+}
+
+.userInfo{
+display: flex;
+align-items: center;
+padding: 10px;
+
+}
+
+.faEllipsis{
+margin-right: 10px;
+}
+.mainPhoto{
+width: 100%;
+}
+.likeIconBox{
+display: flex;
+justify-content: space-between;
+
+}
+.miniIconBox{
+
+padding-left: 5px;
+font-size: 20px;
+
+}
+
+.faComment{
+  margin-left: 5px;
+}
+.faShareSquare{
+  margin-left: 5px;
+}
+.bookmark{
+padding-right: 5px;
+font-size: 20px;
+}
+
+
+.friendComment{
+
+font-weight: bold;
+padding: 10px 10px 60px 10px;
+}
+.writeBox{
+width: 100%;
+height: 40px;
+}
+
+
+.client{
+padding-left: 10px;
+display: flex;
+align-items: center;
+}
+
+.faCircleUser{
+font-size: 40px;
+padding-right: 10px;
+}
+
+.storyForm{
+border: 1px solid black;
+padding: 10px 0 0 10px;
+
+}
+.storyTitle{
+display: flex;
+justify-content: space-between;
+
+}
+.storyLetter{
+margin-left: 5px;
+}
+.storyAll{
+margin-right: 5px;
+}
+
+.userId{
+padding-left: 10px;
+}
+
+
+.friendsName{
+display: flex;
+align-items: center;
+}
+
+.recommendForm{
+border: 1px solid  gray;
+margin-top: 30px;
+padding-bottom: 10px;
+
+
+
+
+}
+.recommendTitle{
+display: flex;
+justify-content: space-between  ;
+margin-top: 20px;
+
+}
+.forClient{
+padding-left: 10px;
+}
+.viewOur {
+padding-right: 10px;
+}
+
+.recommendPeople{
+
+
+margin-left: 10px;
+margin-top: 5px;
+}
+
