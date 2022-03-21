@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainDongwook.scss';
+
 import {
   FaSearch,
   FaEllipsisH,
@@ -11,6 +12,16 @@ import {
 } from 'react-icons/fa';
 
 function MainDongwook() {
+  const [userComment, setUserComment] = useState(' ');
+  const [userCommenArr, setUserCommentArr] = useState([]);
+
+  const handleComment = e => {
+    console.log(e);
+    setUserComment(e.target.value);
+  };
+  const commentData = e => {
+    setUserCommentArr(e.target.value);
+  };
   return (
     <div className="main">
       <header className="nav">
@@ -90,7 +101,7 @@ function MainDongwook() {
               </div>
             </div>
 
-            <div className="commentBox">
+            <div className="commentBox" onChange={commentData}>
               <div className="friendComment">Lebron This is for you</div>
             </div>
 
@@ -99,7 +110,9 @@ function MainDongwook() {
                 type="text"
                 placeholder=" 댓글달기..."
                 className="writeBox"
+                onChange={handleComment}
               />
+              <button>게시</button>
             </div>
           </div>
         </div>

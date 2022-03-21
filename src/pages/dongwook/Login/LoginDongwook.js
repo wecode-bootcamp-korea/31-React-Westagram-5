@@ -4,13 +4,14 @@ import './LoginDongwook.scss';
 import { Link } from 'react-router-dom';
 
 function LoginDongwook() {
+  const [userId, setUserId] = useState(' ');
+  const [userPassword, setUserPassword] = useState(' ');
+  const btn = document.querySelector('.button');
+
   const navigate = useNavigate();
   const onClickImg = () => {
     navigate('/dong/main');
   };
-
-  const [userId, setUserId] = useState(' ');
-  const [userPassword, setUserPassword] = useState(' ');
 
   const handleIdInput = e => {
     setUserId(e.target.value);
@@ -18,6 +19,11 @@ function LoginDongwook() {
 
   const handlePwInput = e => {
     setUserPassword(e.target.value);
+  };
+  const handleBtn = e => {
+    userId.includes('@') === true && userPassword.length > 5
+      ? (btn.style.backgroundColor = 'black')
+      : (btn.style.backgroundColor = 'white');
   };
 
   return (
@@ -36,12 +42,12 @@ function LoginDongwook() {
           className="passBox"
           placeholder="비밀번호"
           onChange={handlePwInput}
+          onInput={handleBtn}
         />
-        <Link to="/Main">
-          <button className="button" onClick={onClickImg}>
-            로그인
-          </button>
-        </Link>
+
+        <button className="button" onClick={onClickImg}>
+          로그인
+        </button>
       </div>
 
       <div className="forgotBox">비밀번호를 잊으셨나요?</div>
