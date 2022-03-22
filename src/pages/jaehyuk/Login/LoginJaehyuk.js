@@ -8,7 +8,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [isActive, setIsActive] = useState('deactive');
   const [isDisable, setIsDisable] = useState(true);
-  const [color, setColor] = useState('#B2DFFC');
+  const [color, setColor] = useState('#1d84c9');
 
   const isPassedLogin = () => {};
   const isPassLogin = () => {};

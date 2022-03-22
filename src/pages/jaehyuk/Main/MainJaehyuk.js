@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputComment from '../Components/Comments/input.comment';
 import './MainJaehyuk.scss';
+import Nav from '../../../components/Nav/Nav';
 
 /**
  * 1. wrtie comments
