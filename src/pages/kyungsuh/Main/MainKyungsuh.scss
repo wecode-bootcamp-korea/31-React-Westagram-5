@@ -189,12 +189,22 @@ $border-color: 1px solid #DBDBDB;
 
     .commentBox {
       width: 93%;
-      height: 8rem;
+      height: 15rem;
       overflow: auto;
 
       .innerBox {
         display: flex;
         justify-content: space-between;
+
+        .profileImgNameBox {
+          display: flex;
+
+        }
+
+        .imgProfile {
+          width: 32px;
+          height: 32px;
+        }
       }
 
       .comment {
@@ -205,6 +215,10 @@ $border-color: 1px solid #DBDBDB;
       img {
         width: 16px;
         height: 16px;
+
+        img:last-child {
+          margin-left: 5px;
+        }
       }
 
       .moreIconBox .iconMore {

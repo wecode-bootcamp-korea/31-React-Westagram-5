@@ -1,8 +1,17 @@
 import React from 'react';
 
-const Comment = ({ value }) => {
+const Comment = ({ name, comment, value }) => {
   return (
     <div className="innerBox">
+      <div className="profileImgNameBox">
+        <img
+          className="imgProfile"
+          src="/images/kyungsuh/basic-profile-img.png"
+          alt="프로필 사진"
+        />
+        <div className="comment"> {name}</div>
+      </div>
+      <div className="comment">{comment}</div>
       <div className="comment">{value}</div>
       <div className="iconBox">
         <button className="deleteBtn">

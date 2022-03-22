@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import Comment from './Comment';
+// import COMMENT_LIST from './CommentData';
+import CommentList from './CommentList';
 
 function Feed() {
   let [input, setInput] = useState([]);
   let [inputValue, setInputValue] = useState('');
   let [isCommentBtn, setIsCommentBtn] = useState(true);
   let [color, setColor] = useState('#B2DFFC');
+
+  // let [comment, setComment] = useState({ COMMENT_LIST });
 
   const hasInputValue = () => {
     inputValue.length === -1 ? setIsCommentBtn(true) : colorChange();
@@ -81,6 +85,7 @@ function Feed() {
               alt="더보기"
               className="iconMore"
             />
+            <CommentList />
             {input.map((value, index) => {
               return <Comment value={value} key={index} />;
             })}
