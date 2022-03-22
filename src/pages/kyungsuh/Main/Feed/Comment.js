@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Comment = ({ name, comment, value }) => {
+const Comment = props => {
+  const { name, comment, value } = props;
   return (
     <div className="innerBox">
       <div className="profileImgNameBox">

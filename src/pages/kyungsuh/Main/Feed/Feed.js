@@ -9,8 +9,6 @@ function Feed() {
   let [isCommentBtn, setIsCommentBtn] = useState(true);
   let [color, setColor] = useState('#B2DFFC');
 
-  // let [comment, setComment] = useState({ COMMENT_LIST });
-
   const hasInputValue = () => {
     inputValue.length === -1 ? setIsCommentBtn(true) : colorChange();
   };
@@ -85,7 +83,15 @@ function Feed() {
               alt="더보기"
               className="iconMore"
             />
-            <CommentList />
+            <CommentList
+              input={input}
+              inputValue={inputValue}
+              setInputValue={setInputValue}
+              hasInputValue={hasInputValue}
+              color={color}
+              handleInputList={handleInputList}
+              isCommentBtn={isCommentBtn}
+            />
             {input.map((value, index) => {
               return <Comment value={value} key={index} />;
             })}

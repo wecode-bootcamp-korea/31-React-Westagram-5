@@ -2,17 +2,16 @@ import React from 'react';
 import Comment from './Comment';
 import COMMENT_LIST from './CommentData';
 
-function CommentList() {
+function CommentList(props) {
   return (
     <div className="commentList">
-      <p style={{ padding: '10px' }}>Comment</p>
       <ul>
-        {COMMENT_LIST.map(comment => {
+        {COMMENT_LIST.map(commentItem => {
           return (
             <Comment
-              key={comment.id}
-              name={comment.userName}
-              comment={comment.content}
+              key={commentItem.id}
+              name={commentItem.userName}
+              comment={commentItem.content}
             />
           );
         })}
