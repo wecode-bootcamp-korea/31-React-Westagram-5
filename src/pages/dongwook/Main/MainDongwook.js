@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MainDongwook.scss';
+import Nav from '../../../components/Nav/Nav';
 
 import {
   FaSearch,
@@ -28,40 +29,7 @@ function MainDongwook() {
 
   return (
     <div className="main">
-      <header className="nav">
-        <div className="headerLogo  ">
-          <img
-            src="/images/dongwook/instalogo.jpg"
-            className="logoImg"
-            alt="instaLogo"
-          />
-          <span className="logoText">westagram</span>
-        </div>
-
-        <div className="search">
-          <input type="text" placeholder="검색" className="searchPerson" />
-          <FaSearch />
-        </div>
-
-        <div className="profileAlarm">
-          <img
-            src="/images/dongwook/explore.png"
-            className="explore"
-            alt="explore"
-          />
-          <img
-            src="/images/dongwook/heart.png"
-            className="heartAlarm"
-            alt="heartAlarm"
-          />
-          <img
-            src="/images/dongwook/profile.png"
-            className="myProfile"
-            alt="myProfile"
-          />
-        </div>
-      </header>
-
+      <Nav />
       <div className="mainCont">
         <div className="contBox">
           <div className="contHeader">
