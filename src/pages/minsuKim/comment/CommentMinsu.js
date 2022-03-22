@@ -2,16 +2,17 @@ import React from 'react';
 import './CommentMinsu.scss';
 
 function CommentMinsu(props) {
+  console.log(props.commentInputArray);
   let commentInputArray = props.commentInputArray;
   return (
     <>
       <ul className="commentList">
-        {/* comment가 나타나는 부분 */}
-        {commentInputArray.map((value, index) => (
-          <li key={index} className="commentText">
+        {commentInputArray.map(list => (
+          <li key={list.id} className="commentText">
             <div className="commentMargin">
-              <span className="commentWritter">Minsu Kim</span>
-              {value}
+              <span className="commentWritter">{list.name}</span>
+              <span className="commentText">{list.comment}</span>
+              <span className="commentTime">{list.commentTime}</span>
             </div>
           </li>
         ))}

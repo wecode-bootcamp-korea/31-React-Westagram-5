@@ -1,21 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 import CommentMinsu from '../comment/CommentMinsu';
 import './MainMinsu.scss';
-// import { useNavigate } from 'react-router-dom';
-// import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 
 function MainMinsu() {
   // 댓글을 저장할 state를 생성한다.
-  const [commentInput, setCommentInput] = useState('');
+  const [commentInput, setCommentInput] = useState({});
 
   //댓글이 저장되는 array state를 생성한다.
   const [commentInputArray, setCommentInputArray] = useState([]);
 
   //input에 onChange Event가 발생할 때 마다 value를 commnetInput에 저장해준다.
   const addInput = event => {
-    setCommentInput(event.target.value);
+    setCommentInput({
+      id: Date(),
+      name: 'minsu',
+      comment: event.target.value,
+      commentTime: '20분전',
+    });
   };
 
   //form이 submit하면 실행되는 함수
@@ -31,13 +33,15 @@ function MainMinsu() {
       ...commentValueList,
     ]);
     //댓글창 빈칸으로
-    setCommentInput('');
+    setCommentInput({});
   };
 
-  const uploadInput = comment => {
-    const comments = [];
-    comments.push(comment);
-  };
+  useEffect(() => {
+    fetch('/data/mockDataMinsu/mockComment.json')
+      .then(comment => comment.json())
+      .then(comment => setCommentInputArray(comment));
+  }, []);
+
   return (
     <>
       <Nav />
@@ -207,10 +211,10 @@ function MainMinsu() {
         </aside>
       </main>
 
-      <script
+      {/* <script
         src="https://kit.fontawesome.com/d33ee304fc.js"
-        crossorigin="anonymous"
-      ></script>
+        crossOrigin="anonymous"
+      ></script> */}
 
       <script src="js/main.js"></script>
     </>
