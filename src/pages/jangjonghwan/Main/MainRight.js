@@ -1,4 +1,5 @@
 import React from 'react';
+import './MainRight.scss';
 
 function MainRight() {
   return (
@@ -10,7 +11,7 @@ function MainRight() {
       </div>
       <div className="story">
         <table className="story-table">
-          <th colspan="2" className="story-text">
+          <th colspan="2" className="story-user">
             스토리
           </th>
           <th />
@@ -18,9 +19,9 @@ function MainRight() {
             <p className="everyone">모두보기</p>
           </th>
           <tr>
-            <td width="20px">
+            <td className="uploadedTime">
               <img
-                className="profile2"
+                className="storyProfile"
                 alt="profile"
                 src="/images/jangjonghwan/profile2.png"
               />
@@ -33,7 +34,7 @@ function MainRight() {
           <tr>
             <td>
               <img
-                className="profile2"
+                className="storyProfile"
                 alt="profile"
                 src="/images/jangjonghwan/profile2.png"
               />
@@ -46,7 +47,7 @@ function MainRight() {
           <tr>
             <td>
               <img
-                className="profile2"
+                className="storyProfile"
                 alt="profile"
                 src="/images/jangjonghwan/profile2.png"
               />
@@ -59,7 +60,7 @@ function MainRight() {
           <tr>
             <td>
               <img
-                className="profile2"
+                className="storyProfile"
                 alt="profile"
                 src="/images/jangjonghwan/profile2.png"
               />
@@ -72,7 +73,7 @@ function MainRight() {
           <tr>
             <td>
               <img
-                className="profile2"
+                className="storyProfile"
                 alt="profile"
                 src="/images/jangjonghwan/profile2.png"
               />

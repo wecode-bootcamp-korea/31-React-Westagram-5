@@ -1,9 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Comment from './Comment';
-
+import './Feed.scss';
 function Feed(props) {
-  console.log(props);
   const [comment, setComment] = useState('');
 
   const [commentList, setCommentList] = useState([]);
@@ -23,16 +22,6 @@ function Feed(props) {
     }
   };
 
-  const [list, setList] = useState([]);
-  useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/data/jangjonghwan/commentData.json')
-      .then(res => res.json())
-      .then(data => {
-        setList(data);
-      });
-  }, []);
   return (
     <div className="feeds">
       <img
@@ -47,6 +36,7 @@ function Feed(props) {
         alt="feed"
         src="/images/jangjonghwan/feeds.jpg"
       />
+      <div />
       <div className="likebutton">
         <img
           className="fa-thumbs-up"
@@ -74,7 +64,12 @@ function Feed(props) {
           <span className="clickLike">aineworld님 외 10명이 좋아합니다.</span>
           <li className="commentList">
             {props.comment.map(data => {
-              return <li key={data.id}>{data.userName}</li>;
+              return (
+                <li key={data.id}>
+                  {data.userName}
+                  {data.content}
+                </li>
+              );
             })}
             {commentList.map((comment, index) => (
               <Comment comment={comment} key={index} />

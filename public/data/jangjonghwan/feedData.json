@@ -2,7 +2,7 @@
   {
     "id": 1,
     "userName": "1번피드",
-    "content": "Welcome to world best coding bootcamp!",
+    "feedImg": "https://images.unsplash.com/photo-1647209435077-33edac1987ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     "isLiked": true,
     "comment": [
       {
@@ -28,7 +28,7 @@
   {
     "id": 2,
     "userName": "2번피드",
-    "content": "Welcome to world best coding bootcamp!",
+    "feedImg": "https://images.unsplash.com/photo-1647725904168-acaa7ef93d73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2800&q=80",
     "isLiked": true,
     "comment": [
       {
@@ -54,7 +54,7 @@
   {
     "id": 3,
     "userName": "3번피드",
-    "content": "Welcome to world best coding bootcamp!",
+    "feedImg": "https://images.unsplash.com/photo-1647244038163-1ae5fc907c3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80",
     "isLiked": true,
     "comment": [
       {
