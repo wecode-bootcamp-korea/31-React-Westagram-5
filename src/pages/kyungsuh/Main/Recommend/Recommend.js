@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import RecommendList from './RecommendList';
 
 function Recommend() {
   const [Recommend, setRecommend] = useState([]);
@@ -18,16 +19,7 @@ function Recommend() {
       <div className="storyList">
         {Recommend.map(list => {
           return (
-            <div className="storyItem" key={list.id}>
-              <div>
-                <img src="/images/kyungsuh/basic-profile-img.png" alt="" />
-              </div>
-              <div className="right">
-                <span>{list.name}</span>
-                <span>{list.time}</span>
-              </div>
-              <button className="follow">팔로우</button>
-            </div>
+            <RecommendList key={list.id} name={list.name} time={list.time} />
           );
         })}
       </div>

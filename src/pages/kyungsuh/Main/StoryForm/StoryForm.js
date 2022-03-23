@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Storylist from './Storylist';
 
 function StoryForm() {
   const [story, setStory] = useState([]);
@@ -19,13 +20,7 @@ function StoryForm() {
         {story &&
           story.map(list => {
             return (
-              <div className="storyItem" key={list.id}>
-                <img src="/images/kyungsuh/basic-profile-img.png" alt="" />
-                <div className="right">
-                  <span>{list.name}</span>
-                  <span>{list.time}</span>
-                </div>
-              </div>
+              <Storylist key={list.id} name={list.name} time={list.time} />
             );
           })}
       </div>

@@ -25,7 +25,6 @@ function Login() {
     })
       .then(response => response.json())
       .then(result => {
-        console.log(result);
         if (result.token) {
           localStorage.setItem('wrw-token', result.token);
           navigate('/suh/main');
