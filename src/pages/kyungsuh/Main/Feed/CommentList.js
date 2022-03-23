@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
-function CommentList(props) {
-  const [comment, setCommnet] = useState([]);
+function CommentList(data) {
+  console.log(data);
+  const { commentList } = data.data;
+  const [comment, setComment] = useState([...commentList]);
 
-  useEffect(() => {
-    fetch('/data/kyungsuh/feedData.json')
-      .then(res => res.json())
-      .then(data => setCommnet(data));
-  });
+  console.log(comment);
+
+  // useEffect(() => {
+  //   fetch('/data/kyungsuh/feedData.json')
+  //     .then(res => res.json())
+  //     .then(data => setComment(data));
+  // }, []);
+
   return (
     <div className="commentList">
       <ul>
@@ -20,9 +25,9 @@ function CommentList(props) {
                   src="/images/kyungsuh/basic-profile-img.png"
                   alt="프로필 사진"
                 />
-                <div className="comment"> {data.commentList[0].userName}</div>
+                <div className="comment"> {data.userName}</div>
               </div>
-              <div className="comment">{data.commentList[0].content}</div>
+              <div className="comment">{data.content}</div>
               {/* <div className="comment">{value}</div> */}
               <div className="iconBox">
                 <button className="deleteBtn">

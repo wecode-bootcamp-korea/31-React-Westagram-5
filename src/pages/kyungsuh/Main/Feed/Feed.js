@@ -35,13 +35,13 @@ function Feed() {
     fetch('/data/kyungsuh/feedData.json')
       .then(res => res.json())
       .then(data => setFeed(data));
-  });
+  }, []);
 
   return (
     <div className="feed">
       {feed.map(data => {
         return (
-          <article className="article">
+          <article className="article" key={data.id}>
             <header>
               <div className="head">
                 <img
@@ -100,6 +100,7 @@ function Feed() {
                   color={color}
                   handleInputList={handleInputList}
                   isCommentBtn={isCommentBtn}
+                  data={data}
                 />
                 {input.map((value, index) => {
                   return <Comment value={value} key={index} />;
