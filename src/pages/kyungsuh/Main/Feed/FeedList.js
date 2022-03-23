@@ -5,8 +5,8 @@ import Feed from './Feed';
 function FeedList() {
   return (
     <>
-      {FEED_LIST.map(i => {
-        return <Feed />;
+      {FEED_LIST.map((i, a) => {
+        return <Feed key={a} />;
       })}
     </>
   );

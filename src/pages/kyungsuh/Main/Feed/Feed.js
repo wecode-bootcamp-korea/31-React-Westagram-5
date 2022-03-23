@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Comment from './Comment';
-// import COMMENT_LIST from './CommentData';
 import CommentList from './CommentList';
 
 function Feed() {
@@ -30,97 +29,109 @@ function Feed() {
     }
   };
 
+  const [feed, setFeed] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/kyungsuh/feedData.json')
+      .then(res => res.json())
+      .then(data => setFeed(data));
+  });
+
   return (
     <div className="feed">
-      <article className="article">
-        <header>
-          <div className="head">
-            <img
-              src="/images/kyungsuh/basic-profile-img.png"
-              alt="프로필 사진"
-            />
-            <span>a.orazy_sudnics</span>
-          </div>
-        </header>
-        <div className="imgBox">
-          <img
-            src="/images/kyungsuh/userimg.webp"
-            alt="사용자 게시물 이미지"
-            className="userImg"
-          />
-        </div>
-        <div className="iconBox">
-          <div className="icon">
-            <img src="/images/kyungsuh/heart.png" alt="좋아요 누르기" />
-            <img src="/images/kyungsuh/comment.svg" alt="댓글 달기" />
-            <img
-              src="/images/kyungsuh/message-solid.svg"
-              alt="메세지 전송"
-              className="messIcon"
-            />
-          </div>
-          <div className="save">
-            <img
-              src="/images/kyungsuh/bookmark-solid.svg"
-              alt="저장"
-              className="saveIcon"
-            />
-          </div>
-        </div>
-        <div className="likeBox">
-          <p>좋아요 2,798,294개</p>
-          <p>a.orazy_sudnics 🍀</p>
-        </div>
+      {feed.map(data => {
+        return (
+          <article className="article">
+            <header>
+              <div className="head">
+                <img
+                  src="/images/kyungsuh/basic-profile-img.png"
+                  alt="프로필 사진"
+                />
+                <span>{data.userName}</span>
+              </div>
+            </header>
+            <div className="imgBox">
+              <img
+                src={data.thumbnail}
+                alt="사용자 게시물 이미지"
+                className="userImg"
+              />
+            </div>
+            <div className="iconBox">
+              <div className="icon">
+                <img src="/images/kyungsuh/heart.png" alt="좋아요 누르기" />
+                <img src="/images/kyungsuh/comment.svg" alt="댓글 달기" />
+                <img
+                  src="/images/kyungsuh/message-solid.svg"
+                  alt="메세지 전송"
+                  className="messIcon"
+                />
+              </div>
+              <div className="save">
+                <img
+                  src="/images/kyungsuh/bookmark-solid.svg"
+                  alt="저장"
+                  className="saveIcon"
+                />
+              </div>
+            </div>
+            <div className="likeBox">
+              <p>좋아요 {data.likesCount}개</p>
+              <p> {data.userName}</p>
+            </div>
 
-        <div className="timeBox">
-          <span>10분전</span>
-        </div>
+            <div className="timeBox">
+              <span>10분전</span>
+            </div>
 
-        <div className="commentBox">
-          <div className="moreIconBox">
-            <img
-              src="/images/kyungsuh/moreicon.svg"
-              alt="더보기"
-              className="iconMore"
-            />
-            <CommentList
-              input={input}
-              inputValue={inputValue}
-              setInputValue={setInputValue}
-              hasInputValue={hasInputValue}
-              color={color}
-              handleInputList={handleInputList}
-              isCommentBtn={isCommentBtn}
-            />
-            {input.map((value, index) => {
-              return <Comment value={value} key={index} />;
-            })}
-          </div>
-        </div>
+            <div className="commentBox">
+              <div className="moreIconBox">
+                <img
+                  src="/images/kyungsuh/moreicon.svg"
+                  alt="더보기"
+                  className="iconMore"
+                />
+                <CommentList
+                  input={input}
+                  inputValue={inputValue}
+                  setInputValue={setInputValue}
+                  hasInputValue={hasInputValue}
+                  color={color}
+                  handleInputList={handleInputList}
+                  isCommentBtn={isCommentBtn}
+                />
+                {input.map((value, index) => {
+                  return <Comment value={value} key={index} />;
+                })}
+              </div>
+            </div>
 
-        <div className="commentInpBox">
-          <form className="innerBox">
-            <input
-              className="inpComment"
-              value={inputValue}
-              type="text"
-              placeholder="댓글달기..."
-              onChange={e => {
-                setInputValue(e.target.value);
-                hasInputValue();
-              }}
-            />
-            <button
-              style={{ color: color }}
-              className="btnSave off"
-              onClick={handleInputList}
-              disabled={isCommentBtn}
-            >
-              게시
-            </button>
-          </form>
-        </div>
-      </article>
+            <div className="commentInpBox">
+              <form className="innerBox">
+                <input
+                  className="inpComment"
+                  value={inputValue}
+                  type="text"
+                  placeholder="댓글달기..."
+                  onChange={e => {
+                    setInputValue(e.target.value);
+                    hasInputValue();
+                  }}
+                />
+                <button
+                  style={{ color: color }}
+                  className="btnSave off"
+                  onClick={handleInputList}
+                  disabled={isCommentBtn}
+                >
+                  게시
+                </button>
+              </form>
+            </div>
+          </article>
+        );
+      })}
     </div>
   );
 }

@@ -8,7 +8,7 @@ function MainPage() {
     <main className="contMain">
       <section className="mainBox">
         <div>
-          <FeedList />
+          <Feed />
         </div>
         <Aside />
       </section>

@@ -99,9 +99,8 @@ $border-color: 1px solid #DBDBDB;
     .feed {
       max-width: 614px;
       width: 100%;
-      border: $border-color;
       margin-right: 28px;
-      background-color: #fff;
+      background-color: #fafafa;
     }
   }
 }
@@ -119,6 +118,8 @@ $border-color: 1px solid #DBDBDB;
   .article {
     background-color: #fff;
     position: relative;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 1rem;
 
     header {
 
@@ -190,7 +191,7 @@ $border-color: 1px solid #DBDBDB;
     }
 
     .commentBox {
-      height: 15rem;
+      height: 10rem;
       overflow: auto;
       padding: 10px;
 
