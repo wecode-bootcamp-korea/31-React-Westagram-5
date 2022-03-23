@@ -1,108 +1,112 @@
 $border: 1px solid rgba(0, 0, 0, 0.2);
+.feedLi {
+  list-style: none;
+  margin-bottom: 100px;
 
-article {
-  width: 90%;
-  background-color: white;
+  article {
+    width: 90%;
+    background-color: white;
 
-  section {
-    width: 100%;
-    border: $border;
+    section {
+      width: 100%;
+      border: $border;
 
-    .feedHeader {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 25px;
-
-      div {
-        display: flex;
-        align-items: center;
-
-        img {
-          margin-right: 10px;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-        }
-
-        div {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-
-          p {
-            font-weight: bold;
-            line-height: 11px;
-          }
-
-          span {
-            margin-top: 10px;
-            color: #c1c1c1;
-            font-size: 7px;
-          }
-        }
-      }
-    }
-    .feedImage {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 550px;
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    .commentWrapper {
-      padding: 15px 20px;
-
-      .commentIcon {
+      .feedHeader {
         display: flex;
         justify-content: space-between;
-        font-size: 25px;
+        align-items: center;
+        padding: 15px 25px;
 
         div {
           display: flex;
-          width: 15%;
-          justify-content: space-between;
+          align-items: center;
+
+          img {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+              font-weight: bold;
+              line-height: 11px;
+            }
+
+            span {
+              margin-top: 10px;
+              color: #c1c1c1;
+              font-size: 7px;
+            }
+          }
         }
       }
-
-      .commentLikeCount {
-        margin-top: 10px;
-      }
-
-      .commentLike {
+      .feedImage {
         display: flex;
-        margin: 15px 0;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
 
-        p {
-          margin-left: 10px;
-          line-height: 18px;
+        img {
+          height: 100%;
+          width: 100%;
         }
       }
-    }
 
-    .comment {
-      padding: 15px 20px;
-      border-top: var(--border);
+      .commentWrapper {
+        padding: 15px 20px;
 
-      input {
-        width: 400px;
-        border: none;
-        font-size: 16px;
-        outline: none;
+        .commentIcon {
+          display: flex;
+          justify-content: space-between;
+          font-size: 25px;
+
+          div {
+            display: flex;
+            width: 15%;
+            justify-content: space-between;
+          }
+        }
+
+        .commentLikeCount {
+          margin-top: 10px;
+        }
+
+        .commentLike {
+          display: flex;
+          margin: 15px 0;
+
+          p {
+            margin-left: 10px;
+            line-height: 18px;
+          }
+        }
       }
 
-      #submit {
-        float: right;
-        border: none;
-        background-color: white;
-        font-size: 18px;
-        outline: none;
-        cursor: pointer;
+      .comment {
+        padding: 15px 20px;
+        border-top: var(--border);
+
+        input {
+          width: 400px;
+          border: none;
+          font-size: 16px;
+          outline: none;
+        }
+
+        #submit {
+          float: right;
+          border: none;
+          background-color: white;
+          font-size: 18px;
+          outline: none;
+          cursor: pointer;
+        }
       }
     }
   }

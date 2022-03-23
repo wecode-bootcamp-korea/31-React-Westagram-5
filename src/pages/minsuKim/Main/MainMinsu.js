@@ -49,12 +49,14 @@ function MainMinsu() {
     <>
       <Nav />
       <main className="mainContainer">
-        <FeedsMinsu
-          commentInputArray={commentInputArray}
-          submitComment={submitComment}
-          addInput={addInput}
-          commentInputRef={commentInputRef}
-        />
+        <div>
+          <FeedsMinsu
+            commentInputArray={commentInputArray}
+            submitComment={submitComment}
+            addInput={addInput}
+            commentInputRef={commentInputRef}
+          />
+        </div>
         <AsideMinsu />
       </main>
 
