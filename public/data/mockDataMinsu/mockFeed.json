@@ -1,32 +1,52 @@
 [
   {
     "id": 1,
-    "name": "짱구",
-    "comment": "안녕하십니까!",
-    "commentTime": "4시간전"
+    "profileImage": "/images/minsuKim/chulsoo.jpeg",
+    "feedImage": "/images/minsuKim/mockFeedImage/feed-image-1.JPG",
+    "accountID": "chulsoo_rich",
+    "feedInformation": "반포한강공원",
+    "feedTime": "4시간전",
+    "likeNumber": 13,
+    "likeId": "minsuu123"
   },
   {
     "id": 2,
-    "name": "철수",
-    "comment": "안녕하세요~반갑습니다.",
-    "commentTime": "12시간전"
+    "profileImage": "/images/minsuKim/hoon.jpeg",
+    "feedImage": "/images/minsuKim/mockFeedImage/feed-image-2.JPG",
+    "accountID": "hoon_777",
+    "feedInformation": "강남빵집",
+    "feedTime": "4시간전",
+    "likeNumber": 22,
+    "likeId": "99_luv"
   },
   {
     "id": 3,
-    "name": "영희",
-    "comment": "좋은 하루 되세요!!!",
-    "commentTime": "30분전"
+    "profileImage": "/images/minsuKim/jjangu.jpg",
+    "feedImage": "/images/minsuKim/mockFeedImage/feed-image-3.JPG",
+    "accountID": "jjang_9",
+    "feedInformation": "우리집",
+    "feedTime": "4시간전",
+    "likeNumber": 87,
+    "likeId": "icecream777"
   },
   {
     "id": 4,
-    "name": "맹구",
-    "comment": "요즘 날씨가 참 좋네요.",
-    "commentTime": "1시간전"
+    "profileImage": "/images/minsuKim/maenggu.png",
+    "feedImage": "/images/minsuKim/mockFeedImage/feed-image-4.JPG",
+    "accountID": "maeng_9",
+    "feedInformation": "친한 형 집",
+    "feedTime": "4시간전",
+    "likeNumber": 21,
+    "likeId": "wow_man"
   },
   {
     "id": 5,
-    "name": "원장선생님",
-    "comment": "언제 한번 봅시다!",
-    "commentTime": "8시간전"
+    "profileImage": "/images/minsuKim/yuri.jpeg",
+    "feedImage": "/images/minsuKim/mockFeedImage/feed-image-5.JPG",
+    "accountID": "U_Ree",
+    "feedInformation": "스타벅스 교대역점",
+    "feedTime": "4시간전",
+    "likeNumber": 33,
+    "likeId": "strong_ms"
   }
 ]

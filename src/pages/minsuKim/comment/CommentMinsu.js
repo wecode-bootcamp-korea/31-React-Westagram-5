@@ -2,7 +2,6 @@ import React from 'react';
 import './CommentMinsu.scss';
 
 function CommentMinsu(props) {
-  console.log(props.commentInputArray);
   let commentInputArray = props.commentInputArray;
   return (
     <>

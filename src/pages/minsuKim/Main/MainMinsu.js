@@ -3,6 +3,7 @@ import Nav from '../../../components/Nav/Nav';
 import AsideMinsu from '../aside/AsideMinsu';
 import CommentMinsu from '../comment/CommentMinsu';
 import FeedMinsu from '../feed/FeedMinsu';
+import FeedsMinsu from '../feeds/FeedsMinsu';
 import './MainMinsu.scss';
 
 function MainMinsu() {
@@ -48,7 +49,7 @@ function MainMinsu() {
     <>
       <Nav />
       <main className="mainContainer">
-        <FeedMinsu
+        <FeedsMinsu
           commentInputArray={commentInputArray}
           submitComment={submitComment}
           addInput={addInput}
@@ -56,11 +57,6 @@ function MainMinsu() {
         />
         <AsideMinsu />
       </main>
-
-      {/* <script
-        src="https://kit.fontawesome.com/d33ee304fc.js"
-        crossOrigin="anonymous"
-      ></script> */}
 
       <script src="js/main.js"></script>
     </>
