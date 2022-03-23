@@ -13,7 +13,24 @@ function Login() {
   const navigate = useNavigate();
 
   const goMain = () => {
-    navigate('/suh/main');
+    fetch('http://10.58.2.11:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: input,
+        password: inputPw,
+        // name: '찰거머리2',
+        // phone: '01085224967',
+        // date_of_birth: '1998-12-21',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        if (result.token) {
+          localStorage.setItem('wrw-token', result.token);
+          navigate('/suh/main');
+        }
+      });
   };
 
   const handleInput = e => {
