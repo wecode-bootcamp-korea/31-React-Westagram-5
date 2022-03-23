@@ -66,57 +66,57 @@ $border: 1px solid rgba(0, 0, 0, 0.2);
           width: 100%;
         }
       }
-    }
-  }
 
-  .commentWrapper {
-    padding: 15px 20px;
+      .commentWrapper {
+        padding: 15px 20px;
 
-    .commentIcon {
-      display: flex;
-      justify-content: space-between;
-      font-size: 25px;
+        .commentIcon {
+          display: flex;
+          justify-content: space-between;
+          font-size: 25px;
 
-      div {
-        display: flex;
-        width: 15%;
-        justify-content: space-between;
+          div {
+            display: flex;
+            width: 15%;
+            justify-content: space-between;
+          }
+        }
+
+        .commentLikeCount {
+          margin-top: 10px;
+        }
+
+        .commentLike {
+          display: flex;
+          margin: 15px 0;
+
+          p {
+            margin-left: 10px;
+            line-height: 18px;
+          }
+        }
       }
-    }
 
-    .commentLikeCount {
-      margin-top: 10px;
-    }
+      .comment {
+        padding: 15px 20px;
+        border-top: var(--border);
 
-    .commentLike {
-      display: flex;
-      margin: 15px 0;
+        input {
+          width: 400px;
+          border: none;
+          font-size: 16px;
+          outline: none;
+        }
 
-      p {
-        margin-left: 10px;
-        line-height: 18px;
+        #submit {
+          float: right;
+          border: none;
+          background-color: white;
+          font-size: 18px;
+          outline: none;
+          cursor: pointer;
+        }
       }
-    }
-  }
-
-  .comment {
-    padding: 15px 20px;
-    border-top: var(--border);
-
-    input {
-      width: 400px;
-      border: none;
-      font-size: 16px;
-      outline: none;
-    }
-
-    #submit {
-      float: right;
-      border: none;
-      background-color: white;
-      font-size: 18px;
-      outline: none;
-      cursor: pointer;
     }
   }
 
