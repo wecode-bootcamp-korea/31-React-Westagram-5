@@ -1,1 +1,88 @@
-// scss
+.container,
+.box,
+.insideBox {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+
+  .box {
+    width: 450px;
+    height: 500px;
+    background-color: antiquewhite;
+    display: flex;
+    background-color: #fafafa;
+  }
+}
+
+.insideBox {
+  width: 430px;
+  height: 480px;
+  position: absolute;
+  border: 1px solid #e7e8e8;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+
+  .title {
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-family: 'Lobster', cursive;
+  }
+}
+
+.loginButton {
+  margin-bottom: 150px;
+
+  .loginId,
+  .loginPassword {
+    display: block;
+    height: 45px;
+    width: 330px;
+    margin: 7px;
+    padding-left: 10px;
+    background-color: #fafafa;
+    border: 0;
+    outline: 0;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+  }
+}
+
+.loginId::placeholder,
+.loginPassword::placeholder {
+  color: #a4a4a4;
+  text-align: left;
+}
+
+.pwButton {
+  margin-top: 15px;
+  text-align: center;
+
+  button {
+    height: 36px;
+    width: 330px;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+}
+
+.activationBtn {
+  background-color: #0295f6;
+}
+.disabledBtn {
+  background-color: #c4e0fb;
+}
+
+a {
+  color: #20637d;
+  text-decoration: none;
+}
