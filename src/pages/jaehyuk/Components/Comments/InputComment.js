@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './input.comment.scss';
+import './InputComment.scss';
+
 function InputComment(props) {
   const [comment, setComment] = useState('');
   const [commentArr, setcommentArr] = useState([]);
@@ -14,6 +15,7 @@ function InputComment(props) {
     }
   };
 
+  let mockCommentArray = props.mockComment;
   return (
     <>
       <div className="commentBox">
@@ -30,9 +32,12 @@ function InputComment(props) {
         </button>
       </div>
       <div>
-        {commentArr.map((value, index) => {
-          return <p key={index}>{value}</p>;
-        })}
+        {mockCommentArray.map(list => (
+          <li key={list.id}>
+            <span>{list.name}</span>
+            <span>{list.contents}</span>
+          </li>
+        ))}
       </div>
     </>
   );

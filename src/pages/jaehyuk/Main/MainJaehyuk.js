@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import InputComment from '../Components/Comments/input.comment';
+import InputComment from '../Components/Comments/InputComment';
 import './MainJaehyuk.scss';
 import Nav from '../../../components/Nav/Nav';
 
@@ -12,6 +12,14 @@ import Nav from '../../../components/Nav/Nav';
  */
 
 function Main() {
+  const [mockArray, setMockArray] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/commentData.json')
+      .then(res => res.json())
+      .then(res => setMockArray(res));
+  }, []);
+
   return (
     <div className="root-container">
       <Nav />
@@ -83,7 +91,10 @@ function Main() {
                       <div id="input-comment">
                         <div id="input-comment-view"></div>
                         <div className="input-comment-text">
-                          {<InputComment inputName="댓글달기" />}
+                          <InputComment
+                            mockComment={mockArray}
+                            inputName="댓글달기"
+                          />
                         </div>
                       </div>
                     </div>
