@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentMinsu from '../comment/CommentMinsu';
+import './FeedMinsu.scss';
 
 const FeedMinsu = props => {
   return (
