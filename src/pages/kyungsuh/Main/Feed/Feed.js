@@ -39,21 +39,21 @@ function Feed() {
 
   return (
     <div className="feed">
-      {feed.map(data => {
+      {feed.map(feedItem => {
         return (
-          <article className="article" key={data.id}>
+          <article className="article" key={feedItem.id}>
             <header>
               <div className="head">
                 <img
                   src="/images/kyungsuh/basic-profile-img.png"
                   alt="프로필 사진"
                 />
-                <span>{data.userName}</span>
+                <span>{feedItem.userName}</span>
               </div>
             </header>
             <div className="imgBox">
               <img
-                src={data.thumbnail}
+                src={feedItem.thumbnail}
                 alt="사용자 게시물 이미지"
                 className="userImg"
               />
@@ -77,8 +77,8 @@ function Feed() {
               </div>
             </div>
             <div className="likeBox">
-              <p>좋아요 {data.likesCount}개</p>
-              <p> {data.userName}</p>
+              <p>좋아요 {feedItem.likesCount}개</p>
+              <p> {feedItem.userName}</p>
             </div>
 
             <div className="timeBox">
@@ -92,16 +92,7 @@ function Feed() {
                   alt="더보기"
                   className="iconMore"
                 />
-                <CommentList
-                  input={input}
-                  inputValue={inputValue}
-                  setInputValue={setInputValue}
-                  hasInputValue={hasInputValue}
-                  color={color}
-                  handleInputList={handleInputList}
-                  isCommentBtn={isCommentBtn}
-                  data={data}
-                />
+                <CommentList feedItem={feedItem} />
                 {input.map((value, index) => {
                   return <Comment value={value} key={index} />;
                 })}

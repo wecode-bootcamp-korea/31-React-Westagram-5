@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-function CommentList(data) {
-  console.log(data);
-  const { commentList } = data.data;
+function CommentList(feedItem) {
+  // console.log(feedItem);
+  const { commentList } = feedItem.feedItem;
+  // console.log(commentList);
+  // eslint 해결 못함
   const [comment, setComment] = useState([...commentList]);
-
-  console.log(comment);
-
-  // useEffect(() => {
-  //   fetch('/data/kyungsuh/feedData.json')
-  //     .then(res => res.json())
-  //     .then(data => setComment(data));
-  // }, []);
 
   return (
     <div className="commentList">
@@ -28,7 +22,6 @@ function CommentList(data) {
                 <div className="comment"> {data.userName}</div>
               </div>
               <div className="comment">{data.content}</div>
-              {/* <div className="comment">{value}</div> */}
               <div className="iconBox">
                 <button className="deleteBtn">
                   <img src="/images/kyungsuh/xmark-solid.svg" alt="삭제" />
