@@ -5,6 +5,15 @@ import './LoginHwan.scss';
 function Login() {
   const navigate = useNavigate();
   const goToMain = () => {
+    fetch('http://10.58.2.210:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: userId,
+        password: userPassword,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => res);
     navigate('/hwan/main');
   };
 
@@ -23,7 +32,6 @@ function Login() {
       ? setActivation(true)
       : setActivation(false);
   };
-
   return (
     <div className="container">
       <div className="box" />

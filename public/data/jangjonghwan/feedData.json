@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "userName": "1번피드",
+    "content": "Welcome to world best coding bootcamp!",
+    "isLiked": true,
+    "comment": [
+      {
+        "id": 1,
+        "userName": "종환 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "민준 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 3,
+        "userName": " 서준 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userName": "2번피드",
+    "content": "Welcome to world best coding bootcamp!",
+    "isLiked": true,
+    "comment": [
+      {
+        "id": 1,
+        "userName": "예준 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "도윤 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 3,
+        "userName": "시우 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userName": "3번피드",
+    "content": "Welcome to world best coding bootcamp!",
+    "isLiked": true,
+    "comment": [
+      {
+        "id": 1,
+        "userName": "하준 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "지호 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 3,
+        "userName": "지후 : ",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      }
+    ]
+  }
+]
