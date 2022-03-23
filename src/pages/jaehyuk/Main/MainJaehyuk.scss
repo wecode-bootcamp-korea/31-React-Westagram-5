@@ -22,14 +22,14 @@ body {
   margin-top: 20px;
 }
 
-.main {
-  margin-left: 100px;
-  display: flex;
-  flex-direction: row;
-  margin: 30px;
-  flex: 1;
-  border: solid 0.5px;
-}
+// .main {
+//   margin-left: 100px;
+//   display: flex;
+//   flex-direction: row;
+//   margin: 30px;
+//   flex: 1;
+//   border: solid 0.5px;
+// }
 
 .blank {
   width: 10%;
@@ -43,7 +43,9 @@ body {
 
 .main-right {
   display: flex;
-  flex: 0.5;
+  position: absolute;
+  top: 0px;
+  right: 0px;
   margin: 5px;
   flex-direction: column;
   margin-top: 30px;

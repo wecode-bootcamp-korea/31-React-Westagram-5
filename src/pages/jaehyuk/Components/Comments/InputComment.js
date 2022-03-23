@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import './InputComment.scss';
 
+/**
+ * const props = {
+ *  mockComment : ...,
+ *  inputName : ...
+ * }
+ *
+ * const {mockComment, inputName} = porps
+ */
+
 function InputComment(props) {
   const [comment, setComment] = useState('');
   const [commentArr, setcommentArr] = useState([]);

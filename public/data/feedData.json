@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "userName": "jaehyukss",
+    "userImg": "/images/Jaehyuk/jh-images/profiles/recommand-1.jpeg",
+    "userComment": [
+      {
+        "id": 1,
+        "name": "wecode",
+        "contents": "재혁님 공부하세요!"
+      },
+      {
+        "d": 2,
+        "name": "joyoon",
+        "contents": "열심히 하구 있는걸요"
+      },
+      {
+        "id": 3,
+        "name": "jungkook",
+        "contents": "재혁님 화이팅!"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userName": "jjangjjang",
+    "userImg": "/images/Jaehyuk/jh-images/profiles/recommand-2.jpeg",
+    "userComment": [
+      {
+        "id": 1,
+        "name": "bbobbi",
+        "contents": "재혁이 최고"
+      },
+      {
+        "id": 2,
+        "name": "BTS",
+        "contents": "보라해"
+      },
+      {
+        "id": 3,
+        "name": "/LimArmy",
+        "contents": "방탄 없이 못살아!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userName": "ayooning",
+    "userImg": "/images/Jaehyuk/jh-images/profiles/recommand-3.jpeg",
+    "userComment": [
+      {
+        "id": 1,
+        "name": "hello world!",
+        "contents": "하루하루 성장중!"
+      },
+      {
+        "id": 2,
+        "name": "myungsung",
+        "contents": "명사!"
+      },
+      {
+        "id": 3,
+        "name": "react",
+        "contents": "약오르지?"
+      }
+    ]
+  }
+]
