@@ -83,6 +83,11 @@ $border: 1px solid rgba(0, 0, 0, 0.2);
         justify-content: space-between;
       }
     }
+
+    .commentLikeCount {
+      margin-top: 10px;
+    }
+
     .commentLike {
       display: flex;
       margin: 15px 0;

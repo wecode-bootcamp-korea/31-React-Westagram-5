@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 import CommentMinsu from '../comment/CommentMinsu';
 import './MainMinsu.scss';
@@ -9,7 +9,7 @@ function MainMinsu() {
 
   //댓글이 저장되는 array state를 생성한다.
   const [commentInputArray, setCommentInputArray] = useState([]);
-
+  const commentInputRef = useRef();
   //input에 onChange Event가 발생할 때 마다 value를 commnetInput에 저장해준다.
   const addInput = event => {
     setCommentInput({
@@ -33,7 +33,7 @@ function MainMinsu() {
       ...commentValueList,
     ]);
     //댓글창 빈칸으로
-    setCommentInput({});
+    commentInputRef.current.value = '';
   };
 
   useEffect(() => {
@@ -79,9 +79,9 @@ function MainMinsu() {
               </div>
 
               <div className="commentLike">
-                <i className="fa-solid fa-circle-user"></i>
+                <i className="fa-solid fa-circle-user fa-lg"></i>
                 <p>
-                  <span className="userName">Runner.jay</span>님 외 20명이
+                  <span className="userName">jjangu.luv</span>님 외 20명이
                   좋아합니다.
                 </p>
               </div>
@@ -93,8 +93,9 @@ function MainMinsu() {
                 id="commentInput"
                 onChange={addInput}
                 type="text"
-                value={commentInput}
+                // value={commentInput}
                 placeholder="댓글달기..."
+                ref={commentInputRef}
               />
               <button id="submit">게시</button>
             </form>
