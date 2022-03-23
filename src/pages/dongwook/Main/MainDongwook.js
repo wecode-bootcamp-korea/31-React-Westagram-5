@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MainDongwook.scss';
 import Nav from '../../../components/Nav/Nav';
 
@@ -15,6 +15,15 @@ import {
 function MainDongwook() {
   const [userComment, setUserComment] = useState(' ');
   const [userCommentArr, setUserCommentArr] = useState([]);
+  const [comment, setComment] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/mockDataDongWook/mockComment.json')
+      .then(comment => comment.json())
+      .then(comment => setComment(comment));
+  }, []);
+
+  console.log(comment);
 
   const handleComment = e => {
     console.log(e);
@@ -80,7 +89,10 @@ function MainDongwook() {
                     <span>{userComment}</span>
                   </li>
                 ))}{' '}
-                This is for you
+                {comment.map(list => {
+                  return <li key={list.id}>{list.name}</li>;
+                })}{' '}
+                {/*여기서 list명은 내가 지정할 수 있는 값 . 헷갈리지 말기 */}
               </div>
             </div>
 

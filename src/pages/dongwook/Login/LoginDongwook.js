@@ -8,6 +8,26 @@ function LoginDongwook() {
   const [userPassword, setUserPassword] = useState(' ');
   const btn = document.querySelector('.button');
 
+  const goToMain = () => {
+    fetch('http://10.58.1.90:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        //name: '김동욱',
+        email: userId,
+        password: userPassword,
+        //phone: '010-1234-4323',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === 'SUCCESS') {
+          navigate('/dong/main');
+        } else {
+          alert('다시해주세요');
+        }
+      });
+  };
+
   const navigate = useNavigate();
   const onClickImg = () => {
     navigate('/dong/main');
@@ -21,9 +41,9 @@ function LoginDongwook() {
     setUserPassword(e.target.value);
   };
   const handleBtn = e => {
-    userId.includes('@') === true && userPassword.length > 5
+    userId.length > 6 && userPassword.length > 6
       ? (btn.style.backgroundColor = 'black')
-      : (btn.style.backgroundColor = 'white');
+      : (btn.style.backgroundColor = 'green');
   };
 
   return (
@@ -42,10 +62,10 @@ function LoginDongwook() {
           className="passBox"
           placeholder="비밀번호"
           onChange={handlePwInput}
-          onInput={handleBtn}
+          onKeyUp={handleBtn}
         />
 
-        <button className="button" onClick={onClickImg}>
+        <button className="button" onClick={goToMain}>
           로그인
         </button>
       </div>
