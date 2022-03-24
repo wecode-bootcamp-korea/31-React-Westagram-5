@@ -13,6 +13,9 @@ function MainDongwook() {
 
   //console.log(comment);
 
+  const feed = () => {
+    fetch();
+  };
   return (
     <div className="main">
       <Nav />

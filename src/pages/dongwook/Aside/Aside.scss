@@ -4,32 +4,32 @@ $border-color: 1px solid #dbdbdb;
   padding-left: 10px;
   display: flex;
   align-items: center;
-}
 
-.faCircleUser {
-  font-size: 40px;
-  padding-right: 10px;
+  .faCircleUser {
+    font-size: 40px;
+    padding-right: 10px;
+  }
 }
 
 .storyForm {
   border: 1px solid black;
   padding: 10px 0 0 10px;
-}
-.storyTitle {
-  display: flex;
-  justify-content: space-between;
-}
-.storyLetter {
-  margin-left: 5px;
-}
-.storyAll {
-  margin-right: 5px;
-}
 
-.userId {
-  padding-left: 10px;
-}
+  .storyTitle {
+    display: flex;
+    justify-content: space-between;
 
+    .storyLetter {
+      margin-left: 5px;
+    }
+    .storyAll {
+      margin-right: 5px;
+    }
+  }
+  .userId {
+    padding-left: 10px;
+  }
+}
 .friendsName {
   display: flex;
   align-items: center;
@@ -39,20 +39,22 @@ $border-color: 1px solid #dbdbdb;
   border: 1px solid gray;
   margin-top: 30px;
   padding-bottom: 10px;
-}
-.recommendTitle {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.forClient {
-  padding-left: 10px;
-}
-.viewOur {
-  padding-right: 10px;
-}
 
-.recommendPeople {
-  margin-left: 10px;
-  margin-top: 5px;
+  .recommendPeople {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .recommendTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .forClient {
+      padding-left: 10px;
+    }
+    .viewOur {
+      padding-right: 10px;
+    }
+  }
 }
