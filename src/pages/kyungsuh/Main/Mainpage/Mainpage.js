@@ -1,5 +1,5 @@
 import React from 'react';
-import Feed from '../Feed/Feed';
+import Feed from './Feed/Feed';
 import Aside from '../Aside/Aside';
 
 function MainPage() {

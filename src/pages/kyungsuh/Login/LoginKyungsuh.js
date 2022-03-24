@@ -5,10 +5,10 @@ import './LoginKyungsuh.scss';
 import Input from './Input.js';
 
 function Login() {
-  let [input, setInput] = useState('');
-  let [inputPw, setInputPw] = useState('');
-  let [isDisable, setIsDisable] = useState(true);
-  let [color, setColor] = useState('#B2DFFC');
+  const [input, setInput] = useState('');
+  const [inputPw, setInputPw] = useState('');
+  const [isDisable, setIsDisable] = useState(true);
+  const [color, setColor] = useState('#B2DFFC');
 
   const navigate = useNavigate();
 

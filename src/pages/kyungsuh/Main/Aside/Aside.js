@@ -1,6 +1,6 @@
 import React from 'react';
-import StoryForm from '../StoryForm/StoryForm';
-import Recommend from '../Recommend/Recommend';
+import StoryForm from './StoryForm/StoryForm';
+import Recommend from './Recommend/Recommend';
 import Footer from '../Footer/Footer';
 
 function Aside() {

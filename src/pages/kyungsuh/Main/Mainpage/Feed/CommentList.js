@@ -4,7 +4,6 @@ function CommentList(feedItem) {
   // console.log(feedItem);
   const { commentList } = feedItem.feedItem;
   // console.log(commentList);
-  // eslint 해결 못함
   const [comment, setComment] = useState([...commentList]);
 
   return (

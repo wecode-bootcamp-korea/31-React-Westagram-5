@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Comment from './Comment';
 import CommentList from './CommentList';
 
 function Feed() {
@@ -93,9 +92,9 @@ function Feed() {
                   className="iconMore"
                 />
                 <CommentList feedItem={feedItem} />
-                {input.map((value, index) => {
+                {/* {input.map((value, index) => {
                   return <Comment value={value} key={index} />;
-                })}
+                })} */}
               </div>
             </div>
 
