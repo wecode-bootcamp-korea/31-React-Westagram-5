@@ -22,142 +22,157 @@ function Main() {
   const [mockArray, setMockArray] = useState();
 
   useEffect(() => {
-    fetch('/data/feedsData.json')
+    fetch('/data/feedData.json')
       .then(res => res.json())
       .then(res => setMockArray(res));
   }, []);
 
   return (
-    <div className="root-container">
+    <div className="root">
       <Nav />
-      <Feeds />
-      {/* {mockArray && mockArray.map((mock, index) => {})} */}
-      <div className="main-right">
-        <div className="right-profile">
-          <div className="right-profile-id">
-            <div className="child-id">
-              <img
-                alt=""
-                className="right-profile-pic"
-                src="/images/Jaehyuk/jh-images/profiles/child.jpg"
-              />
-              <span className="user-nickname">mong_dory</span>
-              <br />
-            </div>
-          </div>
+      {/* <Feeds mockArray={mockArray} /> */}
+      <div>
+        <div className="feeds-container">
+          {mockArray &&
+            mockArray.map(mock => {
+              return (
+                <Feeds
+                  key={mock.id}
+                  id={mock.id}
+                  userImg={mock.userImg}
+                  userName={mock.userName}
+                  userComment={mock.userComment}
+                />
+              );
+            })}
         </div>
-        <div className="story-box">
-          <div className="story-box-header">
-            <div className="story-add-box">
-              <div className="story-title">
-                <span className="story-title">스토리</span>
-              </div>
-              <div className="see-more-button">
-                <button className="add-more-button">모두 보기</button>
-              </div>
-            </div>
-            <div className="story-profile-box">
-              <div className="story-profile">
+        <div className="main-right">
+          <div className="right-profile">
+            <div className="right-profile-id">
+              <div className="child-id">
                 <img
                   alt=""
-                  className="story-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/story-pic-1.jpeg"
+                  className="right-profile-pic"
+                  src="/images/Jaehyuk/jh-images/profiles/child.jpg"
                 />
-                <p>
-                  <span className="user-nickname">Jaehyukss</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
-              </div>
-              <div className="story-profile">
-                <img
-                  alt=""
-                  className="story-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/story-pic-2.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">yeony95</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
-              </div>
-              <div className="story-profile">
-                <img
-                  alt=""
-                  className="story-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/story-pic-3.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">doraangs000</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
-              </div>
-              <div className="story-profile">
-                <img
-                  alt=""
-                  className="story-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/story-pic-4.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">seeeni</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
+                <span className="user-nickname">mong_dory</span>
+                <br />
               </div>
             </div>
           </div>
-        </div>
-        <div className="recommand-box">
-          <div className="recommand-box-header">
-            <div className="recommand-add-box">
-              <div className="recommand-title">
-                <span className="recommand-title">회원님을 위한 추천</span>
+          <div className="story-box">
+            <div className="story-box-header">
+              <div className="story-add-box">
+                <div className="story-title">
+                  <span className="story-title">스토리</span>
+                </div>
+                <div className="see-more-button">
+                  <button className="add-more-button">모두 보기</button>
+                </div>
               </div>
-              <div className="see-more-button">
-                <button className="add-more-button">모두 보기</button>
+              <div className="story-profile-box">
+                <div className="story-profile">
+                  <img
+                    alt=""
+                    className="story-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/story-pic-1.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">Jaehyukss</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
+                <div className="story-profile">
+                  <img
+                    alt=""
+                    className="story-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/story-pic-2.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">yeony95</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
+                <div className="story-profile">
+                  <img
+                    alt=""
+                    className="story-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/story-pic-3.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">doraangs000</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
+                <div className="story-profile">
+                  <img
+                    alt=""
+                    className="story-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/story-pic-4.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">seeeni</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="recommand-profile-box">
-              <div className="recommand-profile">
-                <img
-                  alt=""
-                  className="recommand-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/recommand-1.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">Jaehyuksssss</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
+          </div>
+          <div className="recommand-box">
+            <div className="recommand-box-header">
+              <div className="recommand-add-box">
+                <div className="recommand-title">
+                  <span className="recommand-title">회원님을 위한 추천</span>
+                </div>
+                <div className="see-more-button">
+                  <button className="add-more-button">모두 보기</button>
+                </div>
               </div>
-              <div className="recommand-profile">
-                <img
-                  alt=""
-                  className="recommand-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/recommand-2.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">yeony95</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
-              </div>
-              <div className="recommand-profile">
-                <img
-                  alt=""
-                  className="recommand-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/recommand-3.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">doraangs000</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
-              </div>
-              <div className="recommand-profile">
-                <img
-                  alt=""
-                  className="story-profile-pic"
-                  src="/images/Jaehyuk/jh-images/profiles/recommand-4.jpeg"
-                />
-                <p>
-                  <span className="user-nickname">seeeni</span>
-                  <span className="recommand-user">회원님을 위한 추천</span>
-                </p>
+              <div className="recommand-profile-box">
+                <div className="recommand-profile">
+                  <img
+                    alt=""
+                    className="recommand-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/recommand-1.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">Jaehyuksssss</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
+                <div className="recommand-profile">
+                  <img
+                    alt=""
+                    className="recommand-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/recommand-2.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">yeony95</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
+                <div className="recommand-profile">
+                  <img
+                    alt=""
+                    className="recommand-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/recommand-3.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">doraangs000</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
+                <div className="recommand-profile">
+                  <img
+                    alt=""
+                    className="story-profile-pic"
+                    src="/images/Jaehyuk/jh-images/profiles/recommand-4.jpeg"
+                  />
+                  <p>
+                    <span className="user-nickname">seeeni</span>
+                    <span className="recommand-user">회원님을 위한 추천</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

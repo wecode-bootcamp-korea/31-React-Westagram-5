@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import InputComment from './Comments/InputComment';
 
-const Feeds = props => {
+const Feeds = ({ id, userImg, userName, userComment }) => {
   return (
     <div>
       <div className="blank"></div>
@@ -13,13 +14,9 @@ const Feeds = props => {
                 className="profile-pic-1"
                 src="/images/Jaehyuk/jh-images/profiles/main-profile.jpeg"
               />
-              <p className="user-nickname">jaehyuksssss</p>
+              <p className="user-nickname">{userName}</p>
             </div>
-            <img
-              alt=""
-              id="picture"
-              src="/images/Jaehyuk/jh-images/main-pic/feeds-pic.jpeg"
-            />
+            <img alt="" id="picture" src={userImg} />
 
             <div className="comment">
               <div className="feeds-footer">
@@ -70,10 +67,10 @@ const Feeds = props => {
                     <div id="input-comment">
                       <div id="input-comment-view"></div>
                       <div className="input-comment-text">
-                        {/* <InputComment
-                          mockComment={mockArray}
+                        <InputComment
+                          mockComment={userComment}
                           inputName="댓글달기"
-                        /> */}
+                        />
                       </div>
                     </div>
                   </div>

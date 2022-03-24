@@ -22,14 +22,14 @@ body {
   margin-top: 20px;
 }
 
-// .main {
-//   margin-left: 100px;
-//   display: flex;
-//   flex-direction: row;
-//   margin: 30px;
-//   flex: 1;
-//   border: solid 0.5px;
-// }
+.main {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  flex: 1;
+  border: solid 0.5px;
+}
 
 .blank {
   width: 10%;
@@ -50,6 +50,7 @@ body {
   flex-direction: column;
   margin-top: 30px;
   border: solid 0.5px;
+  height: 100%;
 }
 
 .right-profile-pic {
