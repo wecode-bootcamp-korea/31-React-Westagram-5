@@ -1,6 +1,6 @@
 import React from 'react';
 import Feed from './Feed/Feed';
-import Aside from '../Aside/Aside';
+import Aside from './Aside/Aside';
 
 function MainPage() {
   return (

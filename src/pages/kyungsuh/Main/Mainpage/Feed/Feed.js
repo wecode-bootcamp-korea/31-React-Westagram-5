@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CommentList from './CommentList';
+import CommentList from './Comment/CommentList';
 
 function Feed() {
   let [input, setInput] = useState([]);
