@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$border-color: 1px solid #dbdbdb;
+
+.mainCont {
+  display: grid;
+  grid-template-columns: 70% 25%;
+  grid-column-gap: 5%;
+  margin: 70px auto 0 auto;
+  max-width: 1000px;
+}
+
+.contBox {
+  border: 1px black solid;
+}
+
+.contHeaderImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userPhoto {
+  width: 40px;
+  border-radius: 70%;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.faEllipsis {
+  margin-right: 10px;
+}
+.mainPhoto {
+  width: 100%;
+}
+.likeIconBox {
+  display: flex;
+  justify-content: space-between;
+}
+.miniIconBox {
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+.faComment {
+  margin-left: 5px;
+}
+.faShareSquare {
+  margin-left: 5px;
+}
+.bookmark {
+  padding-right: 5px;
+  font-size: 20px;
+}
+
+.friendComment {
+  font-weight: bold;
+  padding: 10px 10px 60px 10px;
+}
+.writeBox {
+  width: 100%;
+  height: 40px;
+}

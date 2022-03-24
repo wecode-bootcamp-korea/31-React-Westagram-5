@@ -1,17 +1,17 @@
-$border-color: 1px solid #DBDBDB;
+$border-color: 1px solid #dbdbdb;
 
 .nav {
   border-bottom: $border-color;
   width: 100%;
   display: flex;
   height: 60px;
-  background-color: #FFFFFF;
 
   .navBox {
     width: 65%;
     display: flex;
+    flex: 1;
     gap: 2rem;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 auto;
 
@@ -37,7 +37,7 @@ $border-color: 1px solid #DBDBDB;
     height: 36px;
     border-radius: 8px;
     padding: 0 15px;
-    background: #EFEFEF;
+    background: #efefef;
     border: none;
   }
 
