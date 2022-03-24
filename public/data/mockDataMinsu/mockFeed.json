@@ -5,7 +5,8 @@
     "feedImage": "/images/minsuKim/mockFeedImage/feed-image-1.JPG",
     "accountID": "chulsoo_rich",
     "feedInformation": "반포한강공원",
-    "feedTime": "4시간전",
+    "feedTime": "12시간전",
+    "feedText": "오랜만에 한강공원에서 조깅하니까 개운하다...",
     "likeNumber": 13,
     "likeId": "minsuu123"
   },
@@ -15,7 +16,8 @@
     "feedImage": "/images/minsuKim/mockFeedImage/feed-image-2.JPG",
     "accountID": "hoon_777",
     "feedInformation": "강남빵집",
-    "feedTime": "4시간전",
+    "feedTime": "3시간전",
+    "feedText": "비싸지만 건강한 맛이었던 빵집",
     "likeNumber": 22,
     "likeId": "99_luv"
   },
@@ -25,7 +27,8 @@
     "feedImage": "/images/minsuKim/mockFeedImage/feed-image-3.JPG",
     "accountID": "jjang_9",
     "feedInformation": "우리집",
-    "feedTime": "4시간전",
+    "feedTime": "6시간전",
+    "feedText": "키보드에 물 쏟아서 개빡친다...",
     "likeNumber": 87,
     "likeId": "icecream777"
   },
@@ -35,7 +38,8 @@
     "feedImage": "/images/minsuKim/mockFeedImage/feed-image-4.JPG",
     "accountID": "maeng_9",
     "feedInformation": "친한 형 집",
-    "feedTime": "4시간전",
+    "feedTime": "10시간전",
+    "feedText": "도쿄 워홀 때 친해진 사람들과 하이볼 파티",
     "likeNumber": 21,
     "likeId": "wow_man"
   },
@@ -45,7 +49,8 @@
     "feedImage": "/images/minsuKim/mockFeedImage/feed-image-5.JPG",
     "accountID": "U_Ree",
     "feedInformation": "스타벅스 교대역점",
-    "feedTime": "4시간전",
+    "feedTime": "4g시간전",
+    "feedText": "스타벅스 자몽 블랙티 마실만하네",
     "likeNumber": 33,
     "likeId": "strong_ms"
   }

@@ -34,6 +34,15 @@ const FeedMinsu = props => {
               <span>좋아요 {props.feedInfo.likeNumber}개</span>
             </div>
 
+            <div className="feedTime">
+              <span>{props.feedInfo.feedTime}</span>
+            </div>
+
+            <div className="feedText">
+              <span>{props.feedInfo.accountID}</span>
+              <p>{props.feedInfo.feedText}</p>
+            </div>
+
             <div className="commentLike">
               <i className="fa-solid fa-circle-user fa-lg"></i>
               <p>
@@ -49,7 +58,6 @@ const FeedMinsu = props => {
               id="commentInput"
               onChange={props.addInput}
               type="text"
-              // value={commentInput}
               placeholder="댓글달기..."
               ref={props.commentInputRef}
             />

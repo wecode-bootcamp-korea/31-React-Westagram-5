@@ -2,11 +2,10 @@ import React from 'react';
 import './CommentMinsu.scss';
 
 function CommentMinsu(props) {
-  let commentInputArray = props.commentInputArray;
   return (
     <>
       <ul className="commentList">
-        {commentInputArray.map(list => (
+        {props.commentInputArray.map(list => (
           <li key={list.id} className="commentText">
             <div className="commentMargin">
               <span className="commentWritter">{list.name}</span>

@@ -1,19 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 import AsideMinsu from '../aside/AsideMinsu';
-import CommentMinsu from '../comment/CommentMinsu';
-import FeedMinsu from '../feed/FeedMinsu';
 import FeedsMinsu from '../feeds/FeedsMinsu';
 import './MainMinsu.scss';
 
 function MainMinsu() {
-  // 댓글을 저장할 state를 생성한다.
   const [commentInput, setCommentInput] = useState({});
-
-  //댓글이 저장되는 array state를 생성한다.
   const [commentInputArray, setCommentInputArray] = useState([]);
+  const [feedInputArray, setFeedInputArray] = useState([]);
   const commentInputRef = useRef();
-  //input에 onChange Event가 발생할 때 마다 value를 commnetInput에 저장해준다.
+
   const addInput = event => {
     setCommentInput({
       id: Date(),
@@ -22,10 +18,7 @@ function MainMinsu() {
       commentTime: '20분전',
     });
   };
-
-  //form이 submit하면 실행되는 함수
   const submitComment = event => {
-    // preventDefault로 새로고침 방지
     event.preventDefault();
     if (commentInput.length === 0) {
       alert('Please Enter Commnet');
@@ -35,7 +28,6 @@ function MainMinsu() {
       commentInput,
       ...commentValueList,
     ]);
-    //댓글창 빈칸으로
     commentInputRef.current.value = '';
   };
 
@@ -45,12 +37,19 @@ function MainMinsu() {
       .then(comment => setCommentInputArray(comment));
   }, []);
 
+  useEffect(() => {
+    fetch('/data/mockDataMinsu/mockFeed.json')
+      .then(feed => feed.json())
+      .then(feed => setFeedInputArray(feed));
+  }, []);
+
   return (
     <>
       <Nav />
       <main className="mainContainer">
         <div>
           <FeedsMinsu
+            feedInputArray={feedInputArray}
             commentInputArray={commentInputArray}
             submitComment={submitComment}
             addInput={addInput}
@@ -59,7 +58,6 @@ function MainMinsu() {
         </div>
         <AsideMinsu />
       </main>
-
       <script src="js/main.js"></script>
     </>
   );

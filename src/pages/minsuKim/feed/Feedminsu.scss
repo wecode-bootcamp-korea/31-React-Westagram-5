@@ -77,6 +77,21 @@ $border: 1px solid rgba(0, 0, 0, 0.2);
           margin-top: 10px;
         }
 
+        .feedTime {
+          margin-top: 5px;
+          opacity: 0.5;
+          font-size: 15px;
+        }
+
+        .feedText {
+          display: flex;
+          margin-top: 20px;
+          span {
+            font-weight: 900;
+            margin-right: 10px;
+          }
+        }
+
         .commentLike {
           display: flex;
           margin: 15px 0;
