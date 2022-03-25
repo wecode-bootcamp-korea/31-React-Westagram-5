@@ -13,15 +13,20 @@ function LoginMinsu() {
 
   return (
     <>
-      <div className="login">
+      <div className="loginMinsu">
         <div className="loginBox">
-          <p>weeestagram</p>
+          <p className="loginBoxLogo">weeestagram</p>
           <LoginFormMinsu />
-          <p>Forgot password?</p>
+          <p className="loginBoxForgot">Forgot password?</p>
         </div>
-        <div id="showing-icon-screen">
-          <img alt="Instagram Logo" src="/images/minsuKim/instagram.png" />
+        <div id="showingIconScreen">
+          <img
+            className="showingIconScreenIcon"
+            alt="Instagram Logo"
+            src="/images/minsuKim/instagram.png"
+          />
           <a
+            className="showingIconScreenAnchor"
             href="https://www.flaticon.com/free-icons/instagram"
             title="instagram icons"
           >

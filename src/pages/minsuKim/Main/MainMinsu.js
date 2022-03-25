@@ -46,7 +46,7 @@ function MainMinsu() {
   return (
     <>
       <Nav />
-      <main className="mainContainer">
+      <main className="mainMinsu">
         <div>
           <FeedsMinsu
             feedInputArray={feedInputArray}
@@ -58,7 +58,6 @@ function MainMinsu() {
         </div>
         <AsideMinsu />
       </main>
-      <script src="js/main.js"></script>
     </>
   );
 }

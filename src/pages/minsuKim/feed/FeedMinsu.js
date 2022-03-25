@@ -4,12 +4,16 @@ import './FeedMinsu.scss';
 
 const FeedMinsu = props => {
   return (
-    <li className="feedLi" key={props.feedInfo.id}>
-      <article>
+    <li className="feedMinsu" key={props.feedInfo.id}>
+      <article className="feedMinsuArticle">
         <section className="feed">
           <div className="feedHeader">
-            <div>
-              <img alt="profile_image" src={props.feedInfo.profileImage} />
+            <div className="feedAccountInfo">
+              <img
+                className="feedAvatarImage"
+                alt="profile_image"
+                src={props.feedInfo.profileImage}
+              />
               <div className="feedHeaderName">
                 <p>{props.feedInfo.accountID}</p>
                 <span>{props.feedInfo.feedInformation}</span>
@@ -46,7 +50,7 @@ const FeedMinsu = props => {
             <div className="commentLike">
               <i className="fa-solid fa-circle-user fa-lg"></i>
               <p>
-                <span className="userName">{props.feedInfo.likeId}</span>님 외{' '}
+                <span className="userName">{props.feedInfo.likeId}</span>님 외
                 {props.feedInfo.likeNumber}명이 좋아합니다.
               </p>
             </div>

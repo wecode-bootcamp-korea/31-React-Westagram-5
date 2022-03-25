@@ -1,13 +1,13 @@
 $border: 1px solid rgba(0, 0, 0, 0.2);
-.feedLi {
+.feedMinsu {
   list-style: none;
   margin-bottom: 100px;
 
-  article {
+  .feedMinsuArticle {
     width: 90%;
     background-color: white;
 
-    section {
+    .feed {
       width: 100%;
       border: $border;
 
@@ -17,18 +17,18 @@ $border: 1px solid rgba(0, 0, 0, 0.2);
         align-items: center;
         padding: 15px 25px;
 
-        div {
+        .feedAccountInfo {
           display: flex;
           align-items: center;
 
-          img {
+          .feedAvatarImage {
             margin-right: 10px;
             width: 50px;
             height: 50px;
             border-radius: 50%;
           }
 
-          div {
+          .feedHeaderName {
             display: flex;
             flex-direction: column;
             align-items: flex-start;

@@ -83,21 +83,24 @@ function LoginFormMinsu() {
 
   return (
     <>
-      <form className="LoginForm">
+      <form className="LoginFormMinsu">
         <div>
           <input
+            className="LoginFormMinsuInput"
             onChange={handleIdInput}
             placeholder="Phone number, User name or Email"
           />
         </div>
         <div>
           <input
+            className="LoginFormMinsuInput"
             onChange={handlePasswordInput}
             type="password"
             placeholder="Password"
           />
         </div>
         <button
+          className="LoginFormMinsuBtn"
           type="submit"
           style={{ backgroundColor: btnColor }}
           disabled={btndisabled}
@@ -106,6 +109,7 @@ function LoginFormMinsu() {
           로그인
         </button>
         <button
+          className="LoginFormMinsuBtn"
           type="submit"
           style={{ backgroundColor: btnColor }}
           disabled={btndisabled}
