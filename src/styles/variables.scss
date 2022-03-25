@@ -1,16 +1,21 @@
 $color-grey: #fafafa;
 $color-blue: #0095f6;
+$color-dark-blue: #0a3566;
 $color-black: black;
 $color-white: white;
 $color-border-grey: #dbdbdb;
 $color-dark-grey: #a0a0a0;
+$backgroundColor: rgb(250, 250, 250);
+$backgroundColor2: rgb(255 255, 255);
+$border: 1px solid rgba(0, 0, 0, 0.2);
 
 $font-small: 8px;
 $font-regular: 16px;
 $font-medium: 32px;
 $font-large: 48px;
 $font-xlarge: 56px;
-$font-weight-bold: 600;
+$font-weight-bold: 700;
+$font-blur: rgba(0, 0, 0, 0.3);
 
 @mixin flexCenter {
   display: flex;
