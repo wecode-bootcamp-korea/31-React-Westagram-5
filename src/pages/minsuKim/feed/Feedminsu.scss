@@ -1,0 +1,128 @@
+$border: 1px solid rgba(0, 0, 0, 0.2);
+.feedMinsu {
+  list-style: none;
+  margin-bottom: 100px;
+
+  .feedMinsuArticle {
+    width: 90%;
+    background-color: white;
+
+    .feed {
+      width: 100%;
+      border: $border;
+
+      .feedHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px;
+
+        .feedAccountInfo {
+          display: flex;
+          align-items: center;
+
+          .feedAvatarImage {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+
+          .feedHeaderName {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+              font-weight: bold;
+              line-height: 11px;
+            }
+
+            span {
+              margin-top: 10px;
+              color: #c1c1c1;
+              font-size: 7px;
+            }
+          }
+        }
+      }
+      .feedImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .commentWrapper {
+        padding: 15px 20px;
+
+        .commentIcon {
+          display: flex;
+          justify-content: space-between;
+          font-size: 25px;
+
+          div {
+            display: flex;
+            width: 15%;
+            justify-content: space-between;
+          }
+        }
+
+        .commentLikeCount {
+          margin-top: 10px;
+        }
+
+        .feedTime {
+          margin-top: 5px;
+          opacity: 0.5;
+          font-size: 15px;
+        }
+
+        .feedText {
+          display: flex;
+          margin-top: 20px;
+          span {
+            font-weight: 900;
+            margin-right: 10px;
+          }
+        }
+
+        .commentLike {
+          display: flex;
+          margin: 15px 0;
+
+          p {
+            margin-left: 10px;
+            line-height: 18px;
+          }
+        }
+      }
+
+      .comment {
+        padding: 15px 20px;
+        border-top: var(--border);
+
+        input {
+          width: 400px;
+          border: none;
+          font-size: 16px;
+          outline: none;
+        }
+
+        #submit {
+          float: right;
+          border: none;
+          background-color: white;
+          font-size: 18px;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

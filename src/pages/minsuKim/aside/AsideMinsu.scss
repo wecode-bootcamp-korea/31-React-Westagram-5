@@ -1,0 +1,78 @@
+$border: 1px solid rgba(0, 0, 0, 0.2);
+aside {
+  height: 300px;
+  font-size: 15px;
+  font-weight: bold;
+  min-width: 250px;
+
+  .sectionWrapper {
+    display: flex;
+
+    .circledImage {
+      position: relative;
+
+      img {
+        margin-right: 10px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+
+      .liveCircle {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        left: -2px;
+        top: 0px;
+      }
+    }
+
+    i {
+      margin-right: 10px;
+      font-size: 40px;
+    }
+
+    .sectionInner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+
+      p:last-child {
+        color: #c1c1c1;
+      }
+    }
+  }
+  .contentWrapper {
+    margin: 20px 0;
+    padding: 15px 20px 0 20px;
+    height: 250px;
+    border: $border;
+    background-color: white;
+    overflow: auto;
+
+    .contentHeader {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+
+      p:first-child {
+        color: #c1c1c1;
+        cursor: default;
+      }
+
+      p:last-child {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .contentWrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sectionWrapper {
+    margin-bottom: 20px;
+  }
+}

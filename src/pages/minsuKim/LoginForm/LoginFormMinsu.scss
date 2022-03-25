@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+$backgroundColor: rgb(250, 250, 250);
+$border: 1px solid rgba(0, 0, 0, 0.2);
+
+.LoginFormMinsu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .LoginFormMinsuInput {
+    height: 60px;
+    width: 300px;
+    padding: 15px;
+    background-color: $backgroundColor;
+    border: $border;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .LoginFormMinsuInput::placeholder {
+    font-size: 15px;
+    opacity: 0.3;
+  }
+
+  .LoginFormMinsuBtn {
+    height: 55px;
+    width: 300px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #0095f6;
+  }
+
+  .LoginFormMinsuBtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  // button:disabled {
+  //   background-color: #c4e0f4;
+  // }
+}
