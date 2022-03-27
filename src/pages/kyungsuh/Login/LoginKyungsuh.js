@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginKyungsuh.scss';
+import { Link } from 'react-router-dom';
 
-import Input from './Input.js';
-
-function Login() {
-  const [input, setInput] = useState('');
-  const [inputPw, setInputPw] = useState('');
-  const [isDisable, setIsDisable] = useState(true);
-  const [color, setColor] = useState('#B2DFFC');
+const Login = () => {
+  const [isValue, setIsValue] = useState({
+    id: '',
+    password: '',
+  });
 
   const navigate = useNavigate();
 
-  const goMain = () => {
+  const handleInputValue = e => {
+    const { name, value } = e.target;
+    setIsValue({ ...isValue, [name]: value });
+  };
+
+  const isValid = isValue.id.includes('@') && isValue.password.length > 4;
+
+  const goToMain = () => {
     fetch('http://10.58.2.11:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
-        email: input,
-        password: inputPw,
-        // name: '찰거머리2',
-        // phone: '01085224967',
-        // date_of_birth: '1998-12-21',
+        email: isValue.id,
+        password: isValue.password,
       }),
     })
       .then(response => response.json())
@@ -32,24 +35,24 @@ function Login() {
       });
   };
 
-  const handleInput = e => {
-    setInput(e.target.value);
-    checkInput();
-  };
-
-  const handlePwInput = e => {
-    setInputPw(e.target.value);
-    checkInput();
-  };
-
-  const checkInput = () => {
-    input.indexOf('@') > 1 && inputPw.length > 3
-      ? setColor('#0095f6')
-      : deActivateBtn();
-  };
-
-  const deActivateBtn = () => {
-    setIsDisable(false);
+  const goToJoin = () => {
+    fetch('http://10.58.2.11:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: isValue.id,
+        password: isValue.password,
+        name: '찰거머리',
+        phone: '01085224967',
+        date_of_birth: '1998-12-21',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.token) {
+          localStorage.setItem('wrw-token', result.token);
+          navigate('/suh/main');
+        }
+      });
   };
 
   return (
@@ -57,38 +60,50 @@ function Login() {
       <h1 className="title">westagram</h1>
       <div>
         <form className="formLogin">
-          <Input
+          <input
+            name="id"
             type="text"
+            value={isValue.id}
             placeholder="이메일"
             className="inpID"
-            handleInput={handleInput}
+            onChange={handleInputValue}
           />
           <p className="inputAlert" />
-
-          <Input
+          <input
+            name="password"
             type="password"
+            value={isValue.password}
             placeholder="비밀번호"
             className="inpPass"
-            handleInput={handlePwInput}
+            onChange={handleInputValue}
           />
           <p className="inputPassAlert" />
 
           <button
-            style={{ background: color }}
             type="button"
-            className="btnLogin off"
-            onClick={goMain}
-            disabled={isDisable}
+            className={isValid ? 'btnLogin on' : 'btnLogin off'}
+            disabled={!isValid}
+            onClick={goToMain}
           >
             로그인
           </button>
-          <a className="goToLink" href="#none">
+
+          <button
+            type="button"
+            className={isValid ? 'btnLogin on' : 'btnLogin off'}
+            disabled={!isValid}
+            onClick={goToJoin}
+          >
+            회원가입
+          </button>
+
+          <Link to="/suh/main" className="goToLink" href="#none">
             비밀번호를 잊으셨나요?
-          </a>
+          </Link>
         </form>
       </div>
     </section>
   );
-}
+};
 
 export default Login;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Comment = props => {
-  const { value } = props;
+  const { userName, content } = props;
   return (
     <div className="innerBox">
       <div className="profileImgNameBox">
@@ -10,9 +10,9 @@ const Comment = props => {
           src="/images/kyungsuh/basic-profile-img.png"
           alt="프로필 사진"
         />
-        <div className="comment"> a.orazy_sudnics </div>
+        <div className="comment"> {userName} </div>
       </div>
-      <div className="comment">{value}</div>
+      <div className="comment">{content}</div>
       <div className="iconBox">
         <button className="deleteBtn">
           <img src="/images/kyungsuh/xmark-solid.svg" alt="삭제" />

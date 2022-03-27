@@ -31,15 +31,22 @@ cursive;
       margin-bottom: 1rem;
     }
 
-    button {
-      width: 100%;
+    .btnLogin {
       height: 40px;
       border: none;
       margin-top: 0.5rem;
       border-radius: 5px;
       color: white;
+    }
+
+    .off {
+      background: #B2DFFC;
+      cursor: not-allowed;
+    }
+
+    .on {
+      background: #0095f6;
       cursor: pointer;
-      margin-top: 3rem;
     }
 
     .inputAlert {
@@ -58,14 +65,4 @@ cursive;
       font-size: 12px;
     }
   }
-}
-
-.off {
-  background: #B2DFFC;
-  cursor: not-allowed;
-}
-
-.on {
-  background: #0095f6;
-  cursor: pointer;
 }

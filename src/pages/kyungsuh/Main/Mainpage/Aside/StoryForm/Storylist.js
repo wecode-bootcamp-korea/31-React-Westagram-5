@@ -2,7 +2,6 @@ import React from 'react';
 
 function Storylist(props) {
   const { name, time } = props;
-
   return (
     <div className="storyItem">
       <img src="/images/kyungsuh/basic-profile-img.png" alt="" />
