@@ -1,1 +1,465 @@
-// scss
+$border-color: 1px solid #DBDBDB;
+
+.iconBox img {
+  width: 30px;
+}
+
+/* 검색 */
+.resultBox {
+  display: none;
+  box-sizing: border-box;
+  border: $border-color;
+  width: 375px;
+  height: 362px;
+  margin: 15px -60px 0;
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 10px;
+
+  .speechBubble {
+    position: absolute;
+    width: 5px;
+    padding: 10px;
+    transform: rotate(45deg);
+    top: -11px;
+    left: 12rem;
+    background: #fff;
+    border-top: $border-color;
+    border-left: $border-color;
+  }
+
+  .innerBox {
+    height: 362px;
+    z-index: 10;
+    overflow: auto;
+
+    header {
+      border-bottom: $border-color;
+
+      div {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+        height: 3rem;
+      }
+    }
+  }
+}
+
+.resultBox .innerBox .searchList {
+  height: 100%;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+    padding: 6px;
+
+    .imgProfile {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .btnClose {
+      width: 10px;
+    }
+
+    .inner {
+      display: flex;
+      width: 85%;
+      justify-content: space-between;
+      align-items: center;
+
+      div span {
+        font-size: 10px;
+      }
+
+      div span:first-child {
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.contMain {
+  .mainBox {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 4rem;
+
+    .feed {
+      max-width: 614px;
+      width: 100%;
+      margin-right: 28px;
+    }
+  }
+}
+
+.aside {
+  position: relative;
+  max-width: 304px;
+  width: 100%;
+  margin-left: 2rem;
+}
+
+.feed {
+  .article {
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 1rem;
+
+    header {
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 14px 4px 14px 16px;
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+
+    .imgBox .userImg {
+      width: 100%;
+    }
+
+    .iconBox {
+      position: relative;
+      padding: 7px;
+      cursor: pointer;
+
+      button {
+        background-color: #fff;
+      }
+
+      .icon img:nth-child(1) {
+        width: 22px;
+        padding-right: 5px;
+      }
+
+      .icon img:nth-child(2) {
+        width: 22px;
+        padding-right: 5px;
+      }
+
+      .icon .messIcon {
+        width: 16px;
+      }
+
+      .save .saveIcon {
+        position: absolute;
+        width: 13px;
+        right: 13px;
+        top: 7px;
+      }
+    }
+
+    .likeBox {
+      p {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0 0 8px 20px;
+      }
+
+      p:nth-child(2) {
+        font-weight: 600;
+        font-size: 15px;
+        margin: 0 0 8px 20px;
+      }
+    }
+
+    .timeBox {
+      font-size: 11px;
+      color: #828282;
+      padding-left: 20px;
+    }
+
+    .commentBox {
+      height: 10rem;
+      overflow: auto;
+      padding: 10px;
+
+      .innerBox {
+        display: flex;
+        justify-content: space-between;
+
+        .profileImgNameBox {
+          display: flex;
+
+        }
+
+        .imgProfile {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .comment {
+        margin: 10px 0 8px 15px;
+        font-size: 15px;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+
+        img:last-child {
+          margin-left: 5px;
+        }
+      }
+
+      .moreIconBox .iconMore {
+        position: absolute;
+        top: 1.2rem;
+        right: 1rem;
+        cursor: pointer;
+      }
+
+    }
+
+    .commentInpBox {
+      border-top: $border-color;
+      width: 100%;
+      padding: 10px;
+
+      .innerBox {
+        width: 90%;
+        height: 2rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        input {
+          border: none;
+          width: 25rem;
+        }
+
+        button {
+          border: none;
+          background: #fff;
+          cursor: pointer;
+
+
+        }
+      }
+    }
+  }
+}
+
+.off {
+  color: #B2DFFC;
+}
+
+.on {
+  color: #0095f6;
+}
+
+/* aside */
+.myProfile {
+  position: relative;
+  height: 56px;
+
+  img {
+    width: 3rem;
+  }
+
+  span {
+    font-weight: bold;
+    left: 3.5rem;
+    top: 1.2rem;
+    position: absolute;
+  }
+}
+
+/* storyform */
+@mixin smallBox {
+  border: $border-color;
+  padding: 10px;
+  height: 15rem;
+}
+
+@mixin smallBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+
+@mixin headerBtn {
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.storyForm {
+  @include smallBox();
+
+  .header {
+    @include smallBoxHeader();
+
+    button {
+      @include headerBtn();
+    }
+  }
+}
+
+.recomBox {
+  @include smallBox();
+
+  .header {
+    @include smallBoxHeader();
+
+    .btn {
+      @include headerBtn();
+    }
+  }
+}
+
+/* storyList */
+
+.storyList {
+  height: 12rem;
+  overflow: auto;
+  margin-bottom: 2rem;
+
+  .storyItem {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    height: 48px;
+    padding: 10px;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
+      font-size: 12px;
+      line-height: 16px;
+
+      span:nth-child(2) {
+        font-size: 12px;
+      }
+    }
+
+    .follow {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #0095f6;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+/* recomBox */
+.recomBox {
+  border: 1px solid #dbdbdb;
+
+  .header span {
+    display: block;
+    line-height: 20px;
+  }
+}
+
+// footer
+.footer {
+  width: 90%;
+  font-size: 13px;
+  color: #dbdbdb;
+  margin: 1rem;
+
+  p {
+    width: 90%;
+    padding-bottom: 1rem;
+  }
+}
+
+/* modal */
+.modalContainer {
+  position: relative;
+}
+
+.modalOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBox {
+  position: absolute;
+  top: 3.5rem;
+  right: 11.5rem;
+  width: 14rem;
+  height: 13rem;
+  background: #fff;
+  border: $border-color;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 15px;
+  z-index: 10;
+
+  .speechBubble {
+    position: absolute;
+    width: 5px;
+    padding: 10px;
+    transform: rotate(45deg);
+    top: -11px;
+    left: 12rem;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+  }
+
+  div img {
+    width: 12px;
+  }
+
+  .item {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+  }
+
+  .item:last-child {
+    border-top: $border-color;
+  }
+
+  .item img {
+    margin-right: 8px;
+  }
+}
+
+.modalOn {
+  display: block;
+}
